@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        LeafOBD는 Bluetooth Classic(RFCOMM/SPP)으로 ELM327 어댑터와만 통신한다.
+    -->
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="true" />
+
+    <!--
+        인터넷 권한은 오직 하나의 목적에만 쓴다:
+        GitHub 에 올려 둔 version.json 에서 "최신 버전 번호"를 읽어
+        새 버전이 있으면 사용자에게 알려 주는 것.
+
+        진단 데이터(오류코드·원시 응답·로그)를 전송하는 코드는 이 앱에 없다.
+        업데이트 확인은 설정에서 끌 수 있다. (com.eunho.leafobd.data.UpdateChecker 참조)
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Android 11 이하(API 30까지)에서 사용하는 구 권한 -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+
+    <!-- Android 12(API 31) 이상 런타임 권한 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!--
+        페어링된 장치만 사용하므로 검색(discovery)은 하지 않는다.
+        검색 권한은 선언만 하고 위치정보 목적이 아님을 neverForLocation으로 명시한다.
+    -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name_short"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LeafOBD">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LeafOBD"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            진단 로그(TXT/JSON)를 사용자가 직접 공유할 때만 사용하는 FileProvider.
+            앱 내부 저장소(files/logs)만 노출하며 자동 전송은 하지 않는다.
+        -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

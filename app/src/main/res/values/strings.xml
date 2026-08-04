@@ -1,0 +1,10 @@
+<resources>
+    <!--
+        표시 이름. 앱은 이제 Nissan Leaf 전용이 아니라
+        표준 OBD-II 차량과 UDS 응답 ECU 를 두루 다루므로 "범용" 이름을 쓴다.
+        패키지 ID(com.eunho.leafobd)는 기존 설치·서명 호환을 위해 바꾸지 않는다.
+    -->
+    <string name="app_name">Serotonin 범용 OBD</string>
+    <!-- 런처 아이콘 아래에 짧게 표시될 이름 (긴 이름이 잘릴 때) -->
+    <string name="app_name_short">Serotonin OBD</string>
+</resources>

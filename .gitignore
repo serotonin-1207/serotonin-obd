@@ -1,0 +1,20 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# 배포용 서명 키와 비밀번호 — 절대 저장소에 올리지 않는다
+keystore.properties
+*.jks
+*.keystore

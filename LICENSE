@@ -1,0 +1,30 @@
+MIT License
+
+Copyright (c) 2026 이은호 (Lee Eunho) <serotonin.1207@gmail.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+안전 고지 (Safety Notice)
+
+이 소프트웨어는 차량 진단 보조 도구이며, 정비소의 전문 진단을 대체하지 않습니다.
+고전압 배터리·절연·충전·브레이크·에어백 관련 이상이 의심되면 차량을 운행하거나
+충전하지 말고 전문 점검을 받으십시오. 사용으로 인한 차량 손상·인적 피해에 대해
+제작자는 책임지지 않습니다.
