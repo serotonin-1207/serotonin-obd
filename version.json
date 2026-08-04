@@ -1,6 +1,6 @@
 {
   "versionCode": 2,
   "versionName": "1.1",
-  "notes": "ECU 오류코드 읽기·삭제, DID 스캔, 프로토콜 자동 탐색 추가. 표준 OBD 차량과 UDS 응답 차량을 폭넓게 지원합니다.",
-  "downloadUrl": "https://github.com/serotonin1207/serotonin-obd/releases/latest"
+  "notes": "표준 OBD-II 진단, ECU 직접 조회(UDS), 오류코드 읽기·삭제, 프로토콜 자동 탐색. 첫 공개 버전입니다.",
+  "downloadUrl": "https://github.com/serotonin-1207/serotonin-obd/releases/latest"
 }

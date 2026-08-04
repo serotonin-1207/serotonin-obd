@@ -24,7 +24,7 @@
 
 ### 2. GitHub 저장소 만들기
 
-1. GitHub 에서 새 저장소 생성 (예: `serotonin1207/serotonin-obd`)
+1. GitHub 에서 새 저장소 생성 (예: `serotonin-1207/serotonin-obd`)
 2. 저장소 이름을 정하면 `app/src/main/java/com/eunho/leafobd/data/AppInfo.kt` 의
    `VERSION_JSON_URL`, `REPO_URL` 을 실제 주소로 바꾼다.
 3. 코드 업로드:

@@ -24,8 +24,8 @@ object AppInfo {
      * ```
      */
     const val VERSION_JSON_URL =
-        "https://raw.githubusercontent.com/serotonin1207/serotonin-obd/main/version.json"
+        "https://raw.githubusercontent.com/serotonin-1207/serotonin-obd/main/version.json"
 
     /** 소스 코드 저장소. 앱 정보 화면에서 안내한다. */
-    const val REPO_URL = "https://github.com/serotonin1207/serotonin-obd"
+    const val REPO_URL = "https://github.com/serotonin-1207/serotonin-obd"
 }
