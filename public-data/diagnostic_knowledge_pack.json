@@ -1,0 +1,578 @@
+{
+  "schemaVersion": 1,
+  "version": "2026.09.12-public.2",
+  "publishedAt": "2026-09-12",
+  "license": "프로젝트 자체 작성 해설은 저장소 LICENSE 적용. 연결된 제3자 원문은 포함하지 않음.",
+  "sources": [
+    {
+      "id": "nhtsa-hma-p0300-tsb-2013",
+      "publisher": "Hyundai Motor America · NHTSA 공개본",
+      "title": "P0300 관련 기술 서비스 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2013/SB-10060561-2273.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 판매 현대 차량 · 원문 적용표 기준",
+      "reviewedAt": "2026-09-11"
+    },
+    {
+      "id": "nhtsa-kma-eng160-2016",
+      "publisher": "Kia America · NHTSA 공개본",
+      "title": "ENG160 계열 기술 서비스 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10109774-9999.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 판매 기아 차량 · 원문 적용표 기준",
+      "reviewedAt": "2026-09-11"
+    },
+    {
+      "id": "nhtsa-hma-tucson-p0420-2020",
+      "publisher": "Hyundai Motor America · NHTSA 공개본",
+      "title": "Tucson 2.0L P0420 관련 기술 서비스 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10182322-0001.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 판매 Tucson 2.0L · 원문 적용표 기준",
+      "reviewedAt": "2026-09-11"
+    },
+    {
+      "id": "nhtsa-nissan-ntb26-029",
+      "publisher": "Nissan North America · NHTSA 공개본",
+      "title": "NTB26-029 R24B2/R25C8 캠페인 절차",
+      "url": "https://static.nhtsa.gov/odi/rcl/2025/RCRIT-25V655-5430.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 2019–2022 LEAF · 캠페인 대상 차량",
+      "reviewedAt": "2026-09-12"
+    },
+    {
+      "id": "nhtsa-kia-fue066-2024",
+      "publisher": "Kia America · NHTSA 공개본",
+      "title": "FUE066 GDI 연료분사기와 실화 DTC 기술 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11008045-0001.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 Sorento MQ4a·Sportage NQ5/NQ5a · 원문 생산기간 기준",
+      "reviewedAt": "2026-09-12"
+    },
+    {
+      "id": "nhtsa-hma-21-fl-002h",
+      "publisher": "Hyundai Motor America · NHTSA 공개본",
+      "title": "21-FL-002H 증발가스 누설 DTC 기술 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10199108-0001.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 2011–2015 Sonata Hybrid YF HEV 일부 차량",
+      "reviewedAt": "2026-09-12"
+    },
+    {
+      "id": "nhtsa-kia-eng156-2016",
+      "publisher": "Kia America · NHTSA 공개본",
+      "title": "ENG156 P0128 ECM 로직 개선 기술 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2016/SB-10089605-5448.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 2015 Soul PS 1.6L · 원문 생산기간·ROM ID 기준",
+      "reviewedAt": "2026-09-12"
+    },
+    {
+      "id": "nhtsa-kia-eng066-2010",
+      "publisher": "Kia Motors America · NHTSA 공개본",
+      "title": "ENG066 복수 DTC ECM 개선 기술 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10194564-0001.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 2008 Rio/Rio5 JB 1.6L · 원문 생산기간 기준",
+      "reviewedAt": "2026-09-12"
+    }
+  ],
+  "entries": [
+    {
+      "code": "P0300",
+      "title": "불규칙·복수 실린더 실화 감지",
+      "explanation": "엔진의 연소가 고르게 이루어지지 않는다는 코드입니다. 코드만으로 교체할 부품을 정할 수 없습니다.",
+      "evidence": "관련 실린더 코드와 발생 당시 조건을 저장하고 해당 차량의 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2013/SB-10060561-2273.pdf",
+      "sourceScope": "현대 북미 기술 공지 · 문서의 적용 차종·생산기간 확인 필요",
+      "reviewedAt": "2026-09-11",
+      "verification": "공개 문서 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "현대",
+        "model": "원문 적용표 확인 필요",
+        "region": "북미",
+        "modelYears": "원문 적용표 확인 필요",
+        "powertrain": "원문 적용표 확인 필요",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [],
+      "limitations": "",
+      "sourceId": "nhtsa-hma-p0300-tsb-2013",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0171",
+      "title": "희박 혼합 감지 · 뱅크 1",
+      "explanation": "공기와 연료의 혼합 상태가 제어 기준을 벗어난 것으로 감지되었습니다. 발생 조건과 다른 코드를 함께 확인합니다.",
+      "evidence": "해당 ECU의 보정 상태와 적용 기술 공지를 먼저 확인합니다. 국내 동일 차명에 자동 적용하지 않습니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10109774-9999.pdf",
+      "sourceScope": "기아 북미 ENG160 계열 공지 · 적용 차량 한정",
+      "reviewedAt": "2026-09-11",
+      "verification": "공개 문서 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "기아",
+        "model": "원문 적용표 확인 필요",
+        "region": "북미",
+        "modelYears": "원문 적용표 확인 필요",
+        "powertrain": "원문 적용표 확인 필요",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [],
+      "limitations": "",
+      "sourceId": "nhtsa-kma-eng160-2016",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0420",
+      "title": "촉매 계통 효율 기준 미달 · 뱅크 1",
+      "explanation": "배출가스 정화 계통의 검사 결과가 기준에 미치지 못했습니다. 코드 하나가 촉매 교체를 확정하지는 않습니다.",
+      "evidence": "차량 식별 정보·동반 코드·발생 당시 기록을 확보하고 해당 차량의 제조사 절차와 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10182322-0001.pdf",
+      "sourceScope": "현대 북미 Tucson 2.0L 관련 공지 · 국내 사양 적용 미확인",
+      "reviewedAt": "2026-09-11",
+      "verification": "공개 문서 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "현대",
+        "model": "Tucson",
+        "region": "북미",
+        "modelYears": "원문 적용표 확인 필요",
+        "powertrain": "2.0L · 세부 사양 원문 확인",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [],
+      "limitations": "",
+      "sourceId": "nhtsa-hma-tucson-p0420-2020",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P33ED-00",
+      "title": "리프 배터리 추가 진단 · 캠페인 적용 확인",
+      "explanation": "닛산 NTB26-029는 지정된 리콜 작업과 시험 주행 후 고전압 배터리에 P33ED가 현재 또는 과거 코드로 남으면 배터리 교체 절차로 안내합니다. 이 코드만으로 모든 리프의 교체 여부가 정해지는 것은 아닙니다.",
+      "evidence": "서비스센터에 캠페인 대상 여부, 제어기 업데이트 이력, CONSULT 진단 결과를 함께 확인해 달라고 요청하세요.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/rcl/2025/RCRIT-25V655-5430.pdf",
+      "sourceScope": "NTB26-029 (2026-05-18), 1·2·34쪽 · 북미 R24B2/R25C8 대상 차량 한정",
+      "reviewedAt": "2026-09-12",
+      "verification": "제조사 공지 P33ED 확인 · -00 세부 유형 정의 및 국내 적용 미확인",
+      "applicability": {
+        "manufacturer": "닛산",
+        "model": "LEAF ZE1",
+        "region": "북미",
+        "modelYears": "2019–2022 · 캠페인 대상 확인 필요",
+        "powertrain": "전기차",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "삭제 전 코드·ECU·상태와 경고 화면 저장",
+        "서비스센터에서 차량별 캠페인 적용과 업데이트 이력 확인",
+        "센터의 배터리 추가 진단 및 후속 조치 확인"
+      ],
+      "limitations": "북미 공지는 국내 리콜 대상 또는 보증 적용을 확정하지 않습니다. 과거 코드도 해당 캠페인에서는 판단 대상입니다.",
+      "sourceId": "nhtsa-nissan-ntb26-029",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "MANUFACTURER_SPECIFIC"
+    },
+    {
+      "code": "P3180-97",
+      "title": "리프 ECU 코드 · 삭제 후 점검 조건 확인",
+      "explanation": "닛산 NTB26-029에는 제어기 업데이트 뒤 P3180이 소거되지 않는 경우를 위한 별도 정비 절차가 있습니다. 일반적인 코드 삭제만으로 해결되는지 판단하려면 해당 차량의 정비 절차와 대조해야 합니다.",
+      "evidence": "센터가 안내한 대상 ECU·재시동 조건을 확인하고 삭제 전후 코드 상태를 전달하세요.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/rcl/2025/RCRIT-25V655-5430.pdf",
+      "sourceScope": "NTB26-029 (2026-05-18), 29쪽 · 캠페인 업데이트 후 절차의 P3180 언급",
+      "reviewedAt": "2026-09-12",
+      "verification": "P3180 공지 언급 확인 · 고장 검출 조건과 -97 정의 미확인",
+      "applicability": {
+        "manufacturer": "닛산",
+        "model": "LEAF ZE1",
+        "region": "북미",
+        "modelYears": "2019–2022 · 캠페인 대상 확인 필요",
+        "powertrain": "전기차",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "같은 시점의 동반 코드와 ECU 주소 저장",
+        "센터에 현재 코드인지 과거 코드인지 대조 요청",
+        "캠페인 이력과 해당 차량의 후속 점검 절차 확인"
+      ],
+      "limitations": "이 공지는 P3180-97 전체 정의를 제공하지 않습니다. 배터리나 제어기 교체를 이 코드만으로 결정하지 않습니다.",
+      "sourceId": "nhtsa-nissan-ntb26-029",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "MANUFACTURER_SPECIFIC"
+    },
+    {
+      "code": "P317E-97",
+      "title": "리프 수신 코드 · 제조사 정의 확인 중",
+      "explanation": "리프 실차 기록에서 확인한 코드입니다. 해당 연식 제조사 원문으로 세부 정의와 검출 조건을 확인하지 못해 고장 원인이나 교체 부품을 제시하지 않습니다.",
+      "evidence": "코드 원문·ECU 주소·상태 비트를 저장해 서비스센터에 해당 차량 정비 매뉴얼 기준 해석을 요청하세요.",
+      "sourceUrl": "",
+      "sourceScope": "프로젝트 실차 기록 · 공개 제조사 정의 근거 미확보",
+      "reviewedAt": "2026-09-12",
+      "verification": "수신 이력만 확인 · 정의 미검증",
+      "applicability": {
+        "manufacturer": "닛산",
+        "model": "LEAF ZE1",
+        "region": "시험 차량 기록",
+        "modelYears": "2019 · 다른 연식 적용 미확인",
+        "powertrain": "전기차",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "삭제 전 동반 코드와 상태 저장",
+        "센터가 지정한 삭제 대상·후속 점검 조건 확인",
+        "재조회 결과와 증상 변화를 함께 전달"
+      ],
+      "limitations": "다른 코드와 함께 수신되었다는 사실만으로 동일 원인이라고 판단할 수 없습니다.",
+      "sourceId": "",
+      "verificationGrade": "UNVERIFIED",
+      "codeScope": "MANUFACTURER_SPECIFIC"
+    },
+    {
+      "code": "P0301",
+      "title": "1번 실린더 실화 감지",
+      "explanation": "엔진 제어기가 1번 실린더의 연소 불균형을 감지했습니다. 점화플러그나 인젝터 한 부품의 고장을 코드만으로 확정할 수 없습니다.",
+      "evidence": "발생 조건과 다른 실화 코드를 먼저 보존하고 차량별 점화·연료·압축 진단 순서를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11008045-0001.pdf",
+      "sourceScope": "Kia FUE066 (2024), 2–3쪽 · 해당 Sorento/Sportage 생산기간의 인젝터 사례",
+      "reviewedAt": "2026-09-12",
+      "verification": "제조사 공개 문서에서 코드 명칭·차량별 사례 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "기아",
+        "model": "Sorento MQ4a · Sportage NQ5/NQ5a",
+        "region": "북미",
+        "modelYears": "원문 1쪽 생산기간 확인 필요",
+        "powertrain": "GDI 내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임의 RPM·부하·냉각수 온도를 저장",
+        "P0300과 다른 실린더 코드를 함께 확인",
+        "해당 차량 절차에 따라 점화·연료·압축 계통을 구분 점검"
+      ],
+      "limitations": "공개 공지는 제한된 차량의 인젝터 사례입니다. 다른 제조사·엔진에서 같은 코드가 인젝터 교체를 뜻하지 않습니다.",
+      "sourceId": "nhtsa-kia-fue066-2024",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0302",
+      "title": "2번 실린더 실화 감지",
+      "explanation": "엔진 제어기가 2번 실린더의 연소 불균형을 감지했습니다. 점화플러그나 인젝터 한 부품의 고장을 코드만으로 확정할 수 없습니다.",
+      "evidence": "발생 조건과 다른 실화 코드를 먼저 보존하고 차량별 점화·연료·압축 진단 순서를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11008045-0001.pdf",
+      "sourceScope": "Kia FUE066 (2024), 2–3쪽 · 해당 Sorento/Sportage 생산기간의 인젝터 사례",
+      "reviewedAt": "2026-09-12",
+      "verification": "제조사 공개 문서에서 코드 명칭·차량별 사례 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "기아",
+        "model": "Sorento MQ4a · Sportage NQ5/NQ5a",
+        "region": "북미",
+        "modelYears": "원문 1쪽 생산기간 확인 필요",
+        "powertrain": "GDI 내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임의 RPM·부하·냉각수 온도를 저장",
+        "P0300과 다른 실린더 코드를 함께 확인",
+        "해당 차량 절차에 따라 점화·연료·압축 계통을 구분 점검"
+      ],
+      "limitations": "공개 공지는 제한된 차량의 인젝터 사례입니다. 다른 제조사·엔진에서 같은 코드가 인젝터 교체를 뜻하지 않습니다.",
+      "sourceId": "nhtsa-kia-fue066-2024",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0303",
+      "title": "3번 실린더 실화 감지",
+      "explanation": "엔진 제어기가 3번 실린더의 연소 불균형을 감지했습니다. 점화플러그나 인젝터 한 부품의 고장을 코드만으로 확정할 수 없습니다.",
+      "evidence": "발생 조건과 다른 실화 코드를 먼저 보존하고 차량별 점화·연료·압축 진단 순서를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11008045-0001.pdf",
+      "sourceScope": "Kia FUE066 (2024), 2–3쪽 · 해당 Sorento/Sportage 생산기간의 인젝터 사례",
+      "reviewedAt": "2026-09-12",
+      "verification": "제조사 공개 문서에서 코드 명칭·차량별 사례 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "기아",
+        "model": "Sorento MQ4a · Sportage NQ5/NQ5a",
+        "region": "북미",
+        "modelYears": "원문 1쪽 생산기간 확인 필요",
+        "powertrain": "GDI 내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임의 RPM·부하·냉각수 온도를 저장",
+        "P0300과 다른 실린더 코드를 함께 확인",
+        "해당 차량 절차에 따라 점화·연료·압축 계통을 구분 점검"
+      ],
+      "limitations": "공개 공지는 제한된 차량의 인젝터 사례입니다. 다른 제조사·엔진에서 같은 코드가 인젝터 교체를 뜻하지 않습니다.",
+      "sourceId": "nhtsa-kia-fue066-2024",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0304",
+      "title": "4번 실린더 실화 감지",
+      "explanation": "엔진 제어기가 4번 실린더의 연소 불균형을 감지했습니다. 점화플러그나 인젝터 한 부품의 고장을 코드만으로 확정할 수 없습니다.",
+      "evidence": "발생 조건과 다른 실화 코드를 먼저 보존하고 차량별 점화·연료·압축 진단 순서를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11008045-0001.pdf",
+      "sourceScope": "Kia FUE066 (2024), 2–3쪽 · 해당 Sorento/Sportage 생산기간의 인젝터 사례",
+      "reviewedAt": "2026-09-12",
+      "verification": "제조사 공개 문서에서 코드 명칭·차량별 사례 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "기아",
+        "model": "Sorento MQ4a · Sportage NQ5/NQ5a",
+        "region": "북미",
+        "modelYears": "원문 1쪽 생산기간 확인 필요",
+        "powertrain": "GDI 내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임의 RPM·부하·냉각수 온도를 저장",
+        "P0300과 다른 실린더 코드를 함께 확인",
+        "해당 차량 절차에 따라 점화·연료·압축 계통을 구분 점검"
+      ],
+      "limitations": "공개 공지는 제한된 차량의 인젝터 사례입니다. 다른 제조사·엔진에서 같은 코드가 인젝터 교체를 뜻하지 않습니다.",
+      "sourceId": "nhtsa-kia-fue066-2024",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0442",
+      "title": "증발가스 계통 작은 누설 감지",
+      "explanation": "연료 증발가스 밀폐 검사에서 작은 누설에 해당하는 결과가 감지되었습니다. 연료캡, 호스, 밸브, 센서 중 하나를 코드만으로 확정할 수 없습니다.",
+      "evidence": "재급유 시점과 프리즈 프레임을 확인하고 연료캡 체결 상태, 눈에 보이는 호스 손상, 차량별 누설 시험 결과를 순서대로 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10199108-0001.pdf",
+      "sourceScope": "Hyundai 21-FL-002H (2021), 1·6쪽 · 2011–2015 Sonata Hybrid의 NVLD 사례",
+      "reviewedAt": "2026-09-12",
+      "verification": "제조사 공개 문서에서 코드 명칭·차량별 사례 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "현대",
+        "model": "Sonata Hybrid YF HEV",
+        "region": "북미",
+        "modelYears": "2011–2015 일부 차량",
+        "powertrain": "하이브리드",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "삭제 전 재급유 시점과 프리즈 프레임 저장",
+        "시동을 끄고 연료캡 체결과 외관 손상 확인",
+        "연료 냄새·누출이 있으면 운행을 중단하고 전문 점검",
+        "차량별 EVAP 누설 시험으로 수리 후 재확인"
+      ],
+      "limitations": "원문의 소금 침전·NVLD 사례는 해당 북미 쏘나타 하이브리드에만 적용됩니다. 국내 차량이나 다른 차종의 원인으로 자동 적용하지 않습니다.",
+      "sourceId": "nhtsa-hma-21-fl-002h",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0455",
+      "title": "증발가스 계통 큰 누설 감지",
+      "explanation": "연료 증발가스 밀폐 검사에서 큰 누설에 해당하는 결과가 감지되었습니다. 연료캡, 호스, 밸브, 센서 중 하나를 코드만으로 확정할 수 없습니다.",
+      "evidence": "재급유 시점과 프리즈 프레임을 확인하고 연료캡 체결 상태, 눈에 보이는 호스 손상, 차량별 누설 시험 결과를 순서대로 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10199108-0001.pdf",
+      "sourceScope": "Hyundai 21-FL-002H (2021), 1·6쪽 · 2011–2015 Sonata Hybrid의 NVLD 사례",
+      "reviewedAt": "2026-09-12",
+      "verification": "제조사 공개 문서에서 코드 명칭·차량별 사례 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "현대",
+        "model": "Sonata Hybrid YF HEV",
+        "region": "북미",
+        "modelYears": "2011–2015 일부 차량",
+        "powertrain": "하이브리드",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "삭제 전 재급유 시점과 프리즈 프레임 저장",
+        "시동을 끄고 연료캡 체결과 외관 손상 확인",
+        "연료 냄새·누출이 있으면 운행을 중단하고 전문 점검",
+        "차량별 EVAP 누설 시험으로 수리 후 재확인"
+      ],
+      "limitations": "원문의 소금 침전·NVLD 사례는 해당 북미 쏘나타 하이브리드에만 적용됩니다. 국내 차량이나 다른 차종의 원인으로 자동 적용하지 않습니다.",
+      "sourceId": "nhtsa-hma-21-fl-002h",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0456",
+      "title": "증발가스 계통 매우 작은 누설 감지",
+      "explanation": "연료 증발가스 밀폐 검사에서 매우 작은 누설에 해당하는 결과가 감지되었습니다. 연료캡, 호스, 밸브, 센서 중 하나를 코드만으로 확정할 수 없습니다.",
+      "evidence": "재급유 시점과 프리즈 프레임을 확인하고 연료캡 체결 상태, 눈에 보이는 호스 손상, 차량별 누설 시험 결과를 순서대로 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10199108-0001.pdf",
+      "sourceScope": "Hyundai 21-FL-002H (2021), 1·6쪽 · 2011–2015 Sonata Hybrid의 NVLD 사례",
+      "reviewedAt": "2026-09-12",
+      "verification": "제조사 공개 문서에서 코드 명칭·차량별 사례 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "현대",
+        "model": "Sonata Hybrid YF HEV",
+        "region": "북미",
+        "modelYears": "2011–2015 일부 차량",
+        "powertrain": "하이브리드",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "삭제 전 재급유 시점과 프리즈 프레임 저장",
+        "시동을 끄고 연료캡 체결과 외관 손상 확인",
+        "연료 냄새·누출이 있으면 운행을 중단하고 전문 점검",
+        "차량별 EVAP 누설 시험으로 수리 후 재확인"
+      ],
+      "limitations": "원문의 소금 침전·NVLD 사례는 해당 북미 쏘나타 하이브리드에만 적용됩니다. 국내 차량이나 다른 차종의 원인으로 자동 적용하지 않습니다.",
+      "sourceId": "nhtsa-hma-21-fl-002h",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0128",
+      "title": "냉각수 온도가 서모스탯 조절 온도보다 낮음",
+      "explanation": "주행 조건에 비해 엔진 냉각수 온도가 예상 수준에 도달하지 않은 것으로 감지되었습니다. 서모스탯뿐 아니라 온도 측정, 주행 조건, 제어기 보정도 차량별로 확인해야 합니다.",
+      "evidence": "냉간 시동부터의 냉각수 온도 변화와 외기온·주행시간을 기록하고 해당 차량의 캠페인·소프트웨어와 냉각계 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2016/SB-10089605-5448.pdf",
+      "sourceScope": "Kia ENG156 (2016), 1·6쪽 · 2015 Soul 1.6L 일부 생산분의 ECM 로직 사례",
+      "reviewedAt": "2026-09-12",
+      "verification": "제조사 공개 문서에서 코드 명칭·차량별 사례 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "기아",
+        "model": "Soul PS",
+        "region": "북미",
+        "modelYears": "2015 · 원문 생산기간 확인 필요",
+        "powertrain": "1.6L 내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "냉간 시동 전후 냉각수 온도와 외기온 비교",
+        "프리즈 프레임의 속도·부하·주행시간 확인",
+        "차량별 캠페인과 ECM 보정 이력 확인",
+        "뜨거운 상태에서 냉각계 캡을 열지 말고 전문 점검"
+      ],
+      "limitations": "공개 공지에는 부품 교체 전에 해당 차량의 ECM 업데이트와 재발 여부를 확인하도록 되어 있습니다. 다른 차종에 같은 조치를 적용하지 않습니다.",
+      "sourceId": "nhtsa-kia-eng156-2016",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0140",
+      "title": "산소센서 회로 활동 없음 · 뱅크 1 센서 2",
+      "explanation": "촉매 뒤쪽 산소센서 신호의 활동이 진단 조건에서 감지되지 않았습니다. 센서 자체, 히터·배선, 배기 누설 또는 차량별 제어 로직을 구분해야 합니다.",
+      "evidence": "프리즈 프레임과 동반 산소센서·히터 코드를 저장하고 배선·커넥터·배기 상태와 차량별 진단 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10194564-0001.pdf",
+      "sourceScope": "Kia ENG066 (2010), 1쪽 · 2008 Rio/Rio5 ECM 사례",
+      "reviewedAt": "2026-09-12",
+      "verification": "제조사 공개 문서에서 코드 명칭·차량별 사례 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "기아",
+        "model": "Rio/Rio5 JB",
+        "region": "북미",
+        "modelYears": "2008 · 원문 생산기간 확인 필요",
+        "powertrain": "1.6L 내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "동반 산소센서·히터 코드와 프리즈 프레임 저장",
+        "배선·커넥터와 배기 누설 외관 확인",
+        "차량별 센서 파형·전압 진단",
+        "수리 후 준비 상태와 재발 여부 확인"
+      ],
+      "limitations": "북미 2008 Rio/Rio5의 ECM 개선 사례이며 센서 교체 지시로 일반화할 수 없습니다.",
+      "sourceId": "nhtsa-kia-eng066-2010",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0451",
+      "title": "증발가스 압력 센서 범위·성능 이상",
+      "explanation": "연료탱크 증발가스 압력 신호가 예상 범위나 변화 특성과 맞지 않는 것으로 감지되었습니다. 센서 고장을 코드만으로 확정할 수 없습니다.",
+      "evidence": "연료량·외기 조건·재급유 시점과 압력 신호를 보존하고 커넥터, 배선, 호스와 차량별 기준을 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10194564-0001.pdf",
+      "sourceScope": "Kia ENG066 (2010), 1쪽 · 2008 Rio/Rio5 ECM 사례",
+      "reviewedAt": "2026-09-12",
+      "verification": "제조사 공개 문서에서 코드 명칭·차량별 사례 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "기아",
+        "model": "Rio/Rio5 JB",
+        "region": "북미",
+        "modelYears": "2008 · 원문 생산기간 확인 필요",
+        "powertrain": "1.6L 내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 연료량 기록",
+        "연료캡·호스·커넥터 외관 확인",
+        "차량별 압력 센서 기준값과 변화 확인",
+        "연료 냄새나 누출이 있으면 운행 중단"
+      ],
+      "limitations": "공개 공지의 ECM 업데이트는 지정된 북미 차량에만 적용됩니다.",
+      "sourceId": "nhtsa-kia-eng066-2010",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0461",
+      "title": "연료량 센서 A 범위·성능 이상",
+      "explanation": "연료량 센서 신호가 실제 사용 조건에서 기대되는 범위나 변화와 맞지 않는 것으로 감지되었습니다. 연료펌프 모듈 교체를 코드만으로 결정할 수 없습니다.",
+      "evidence": "계기판 연료량, 최근 주유량, 주행거리와 프리즈 프레임을 비교하고 센서 회로와 차량별 보정 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10194564-0001.pdf",
+      "sourceScope": "Kia ENG066 (2010), 1쪽 · 2008 Rio/Rio5 ECM 사례",
+      "reviewedAt": "2026-09-12",
+      "verification": "제조사 공개 문서에서 코드 명칭·차량별 사례 대조 · 국내 차량 적용 미검증",
+      "applicability": {
+        "manufacturer": "기아",
+        "model": "Rio/Rio5 JB",
+        "region": "북미",
+        "modelYears": "2008 · 원문 생산기간 확인 필요",
+        "powertrain": "1.6L 내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "최근 주유량·계기판 표시·주행거리 기록",
+        "동반 전압·통신 코드 확인",
+        "차량별 센서 신호와 배선 점검",
+        "수리 또는 보정 후 여러 연료 수준에서 재확인"
+      ],
+      "limitations": "북미 2008 Rio/Rio5의 제어기 개선 사례이며 다른 차종의 부품 원인을 뜻하지 않습니다.",
+      "sourceId": "nhtsa-kia-eng066-2010",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    }
+  ]
+}
