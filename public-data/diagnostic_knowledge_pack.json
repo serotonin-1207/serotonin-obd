@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "version": "2026.09.12-public.2",
-  "publishedAt": "2026-09-12",
+  "version": "2026.09.13-public.3",
+  "publishedAt": "2026-09-13",
   "license": "프로젝트 자체 작성 해설은 저장소 LICENSE 적용. 연결된 제3자 원문은 포함하지 않음.",
   "sources": [
     {
@@ -83,6 +83,66 @@
       "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
       "coverage": "북미 2008 Rio/Rio5 JB 1.6L · 원문 생산기간 기준",
       "reviewedAt": "2026-09-12"
+    },
+    {
+      "id": "nhtsa-fca-18-051-16",
+      "publisher": "FCA US · NHTSA 공개본",
+      "title": "18-051-16 2.4L 파워트레인 진단 개선 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10138981-9999.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미·EMEA 2016 Chrysler 200 2.4L · 원문 생산일 기준",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-gm-a202304840",
+      "publisher": "General Motors · NHTSA 공개본",
+      "title": "A202304840 캠축 액추에이터 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10207729-9999.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 2020–2021 Buick Encore GX·2021 Chevrolet Trailblazer 1.3L",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-ford-23m01",
+      "publisher": "Ford Motor Company · NHTSA 공개본",
+      "title": "23M01 디젤 미립자 필터 프로그램",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249486-0001.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "미국 2015–2019 Ford Transit 3.2L 디젤 · 대상 VIN 확인 필요",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-honda-23-076",
+      "publisher": "American Honda · NHTSA 공개본",
+      "title": "23-076 Accord 토크컨버터 보증 연장 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10241873-0001.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "미국 2017 Accord EX-L V6·Touring V6 · 대상 VIN 확인 필요",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-toyota-t-sb-0049-14",
+      "publisher": "Toyota Motor Sales USA · NHTSA 공개본",
+      "title": "T-SB-0049-14 Camry HV 배터리 냉각 계통 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2016/SB-10096082-5448.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "미국 2013–2014 Camry HV · 원문 VIN 분기 확인 필요",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-hma-17-01-057-1",
+      "publisher": "Hyundai Motor America · NHTSA 공개본",
+      "title": "17-01-057-1 IONIQ Hybrid 구동 모터 캠페인",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125162-9999.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 2017 IONIQ Hybrid 일부 차량 · 캠페인 대상 확인 필요",
+      "reviewedAt": "2026-09-13"
     }
   ],
   "entries": [
@@ -571,6 +631,325 @@
       ],
       "limitations": "북미 2008 Rio/Rio5의 제어기 개선 사례이며 다른 차종의 부품 원인을 뜻하지 않습니다.",
       "sourceId": "nhtsa-kia-eng066-2010",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0101",
+      "title": "흡입 공기량 센서 A 범위·성능 이상",
+      "explanation": "측정한 흡입 공기량이 예상 범위와 맞지 않습니다. 센서 외에도 흡기 누설, 배선, 오염, 제어 소프트웨어가 원인일 수 있습니다.",
+      "evidence": "동반 코드와 발생 당시 엔진 회전수·흡입 공기량을 저장하고 흡기 계통과 차량별 기술 공지를 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10138981-9999.pdf",
+      "sourceScope": "북미·EMEA 2016 Chrysler 200 2.4L · 원문 생산일 기준",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "크라이슬러",
+        "model": "200",
+        "region": "북미",
+        "modelYears": "2016 · 원문 생산일 기준",
+        "powertrain": "2.4L 가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "흡기 호스 이탈·균열 육안 확인",
+        "동반 코드와 프리즈 프레임 저장",
+        "차량별 센서 점검 절차 확인"
+      ],
+      "limitations": "공개 공지는 특정 차량의 소프트웨어 사례이며 다른 차종의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-fca-18-051-16",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0335",
+      "title": "크랭크축 위치 센서 A 회로 이상",
+      "explanation": "엔진 회전 위치 신호가 없거나 정상 범위를 벗어났습니다. 시동 불량이나 시동 꺼짐과 함께 나타날 수 있습니다.",
+      "evidence": "시동 상태와 동반 코드, 엔진 회전수 신호를 저장하고 배선·센서·전원과 차량별 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10138981-9999.pdf",
+      "sourceScope": "북미·EMEA 2016 Chrysler 200 2.4L · 원문 생산일 기준",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "크라이슬러",
+        "model": "200",
+        "region": "북미",
+        "modelYears": "2016 · 원문 생산일 기준",
+        "powertrain": "2.4L 가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "재시동을 반복하지 말고 증상 기록",
+        "동반 캠축·전원 코드 확인",
+        "센서 커넥터와 배선 손상 확인"
+      ],
+      "limitations": "주행 중 시동 꺼짐이 있으면 운행을 중단하고 전문가 점검을 받으세요.",
+      "sourceId": "nhtsa-fca-18-051-16",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0133",
+      "title": "산소센서 응답 지연 · 뱅크 1 센서 1",
+      "explanation": "촉매 앞 산소센서 반응이 기대보다 느립니다. 센서 노화 외에 배기 누설, 혼합비 이상, 배선 문제가 영향을 줄 수 있습니다.",
+      "evidence": "연료 보정값과 다른 혼합비 코드를 함께 보고 배기 누설과 배선을 먼저 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10138981-9999.pdf",
+      "sourceScope": "북미·EMEA 2016 Chrysler 200 2.4L · 원문 생산일 기준",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "크라이슬러",
+        "model": "200",
+        "region": "북미",
+        "modelYears": "2016 · 원문 생산일 기준",
+        "powertrain": "2.4L 가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 연료 보정값 저장",
+        "배기 누설·커넥터 육안 확인",
+        "차량별 센서 파형 기준 확인"
+      ],
+      "limitations": "코드만으로 산소센서 교체를 결정할 수 없습니다.",
+      "sourceId": "nhtsa-fca-18-051-16",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P2610",
+      "title": "엔진 제어 모듈 내부 정지 타이머 성능 이상",
+      "explanation": "시동을 끈 뒤 경과 시간을 판단하는 값에 이상을 감지했습니다. 배터리 전압 저하나 제어 소프트웨어도 관련될 수 있습니다.",
+      "evidence": "12V 배터리 상태, 최근 방전·교체 이력, 동반 코드를 확인하고 차량별 소프트웨어 공지를 조회합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10138981-9999.pdf",
+      "sourceScope": "북미·EMEA 2016 Chrysler 200 2.4L · 원문 생산일 기준",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "크라이슬러",
+        "model": "200",
+        "region": "북미",
+        "modelYears": "2016 · 원문 생산일 기준",
+        "powertrain": "2.4L 가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "12V 배터리 전압과 단자 상태 확인",
+        "최근 방전·점프 시동 여부 기록",
+        "제조사 소프트웨어 업데이트 확인"
+      ],
+      "limitations": "제어기 교체를 뜻하는 코드가 아니며 전원 상태 확인이 먼저입니다.",
+      "sourceId": "nhtsa-fca-18-051-16",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0011",
+      "title": "흡기 캠축 위치 시기 과다 진각 · 뱅크 1",
+      "explanation": "흡기 캠축 위치가 요청 범위보다 앞선 상태로 판단되었습니다. 오일 상태, 제어 밸브, 배선, 기계적 타이밍이 관련될 수 있습니다.",
+      "evidence": "오일량과 규격, 동반 코드를 확인하고 해당 엔진의 캠축 제어 점검 순서를 따릅니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10207729-9999.pdf",
+      "sourceScope": "북미 2020–2021 Buick Encore GX·2021 Chevrolet Trailblazer 1.3L",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "GM",
+        "model": "Encore GX·Trailblazer",
+        "region": "북미",
+        "modelYears": "2020–2021 · 원문 적용표 기준",
+        "powertrain": "1.3L 터보 가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "엔진 오일량·오염·규격 확인",
+        "P0014 등 동반 코드 저장",
+        "차량별 캠축 제어 절차 확인"
+      ],
+      "limitations": "공개 공지의 볼트 결함은 대상 차량에 한정되며 다른 차량에 자동 적용되지 않습니다.",
+      "sourceId": "nhtsa-gm-a202304840",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0014",
+      "title": "배기 캠축 위치 시기 과다 진각 · 뱅크 1",
+      "explanation": "배기 캠축 위치가 요청 범위보다 앞선 상태로 판단되었습니다. 오일 흐름, 제어 밸브, 배선, 기계적 타이밍을 함께 확인합니다.",
+      "evidence": "발생 조건과 P0011 등 동반 코드를 저장하고 오일 및 차량별 캠축 제어 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10207729-9999.pdf",
+      "sourceScope": "북미 2020–2021 Buick Encore GX·2021 Chevrolet Trailblazer 1.3L",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "GM",
+        "model": "Encore GX·Trailblazer",
+        "region": "북미",
+        "modelYears": "2020–2021 · 원문 적용표 기준",
+        "powertrain": "1.3L 터보 가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "엔진 오일량·오염·규격 확인",
+        "P0011 등 동반 코드 저장",
+        "차량별 캠축 제어 절차 확인"
+      ],
+      "limitations": "공개 공지의 수리법은 대상 VIN에만 해당합니다.",
+      "sourceId": "nhtsa-gm-a202304840",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P2002",
+      "title": "디젤 미립자 필터 효율 기준 미달 · 뱅크 1",
+      "explanation": "디젤 미립자 필터 효율이 기준보다 낮다고 판단되었습니다. 필터 손상 외에 차압 센서, 배기 누설, 재생 조건도 확인해야 합니다.",
+      "evidence": "주행 제한 경고, 재생 이력, 차압 관련 동반 코드를 저장하고 차량별 서비스 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10249486-0001.pdf",
+      "sourceScope": "미국 2015–2019 Ford Transit 3.2L 디젤 · 대상 VIN 확인 필요",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "포드",
+        "model": "Transit",
+        "region": "북미",
+        "modelYears": "2015–2019 · 대상 VIN 확인",
+        "powertrain": "3.2L 디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "DPF·차압센서 동반 코드 확인",
+        "최근 단거리 운행과 재생 이력 기록",
+        "강제 재생 전 제조사 절차 확인"
+      ],
+      "limitations": "임의 강제 재생은 고온 위험이 있으므로 전문가가 수행해야 합니다.",
+      "sourceId": "nhtsa-ford-23m01",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0741",
+      "title": "토크컨버터 클러치 회로 성능 또는 고착 해제",
+      "explanation": "자동변속기 토크컨버터 잠금 클러치가 요청대로 체결되지 않거나 미끄러지는 상태로 판단되었습니다.",
+      "evidence": "변속 충격·미끄러짐, 오일 상태, 동반 변속기 코드를 기록하고 차량별 유압·전기 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10241873-0001.pdf",
+      "sourceScope": "미국 2017 Accord EX-L V6·Touring V6 · 대상 VIN 확인 필요",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "혼다",
+        "model": "Accord",
+        "region": "북미",
+        "modelYears": "2017 · 대상 VIN 확인",
+        "powertrain": "V6·6단 자동변속기",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "변속기 오일 누유·상태 확인",
+        "발생 속도와 엔진 회전수 기록",
+        "차량별 보증·캠페인 조회"
+      ],
+      "limitations": "공지의 토크컨버터 교체는 대상 VIN 한정이며 다른 변속기에 그대로 적용하지 않습니다.",
+      "sourceId": "nhtsa-honda-23-076",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0A80",
+      "title": "구동 배터리 팩 교체 필요 판단",
+      "explanation": "하이브리드·전기차 제어기가 구동 배터리 팩 성능에 중대한 이상을 판단한 코드입니다. 코드만으로 배터리 전체 교체를 확정하지 않습니다.",
+      "evidence": "배터리 블록 전압 편차, 온도, 냉각 흡입구와 팬 상태, 동반 세부 코드를 제조사 절차로 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2016/SB-10096082-5448.pdf",
+      "sourceScope": "미국 2013–2014 Camry HV · 원문 VIN 분기 확인 필요",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "토요타",
+        "model": "Camry HV",
+        "region": "북미",
+        "modelYears": "2013–2014 · 원문 VIN 분기 확인",
+        "powertrain": "하이브리드",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "배터리 냉각 흡입구 막힘 육안 확인",
+        "블록 전압·온도 편차 기록",
+        "세부 코드와 대상 VIN 확인"
+      ],
+      "limitations": "고전압 배터리 분해·측정은 자격과 보호장비를 갖춘 전문가 작업입니다.",
+      "sourceId": "nhtsa-toyota-t-sb-0049-14",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0A7F",
+      "title": "구동 배터리 팩 열화 판단",
+      "explanation": "하이브리드·전기차 제어기가 구동 배터리 성능 저하를 감지했습니다. 냉각 불량이나 블록 편차 등 원인 확인이 필요합니다.",
+      "evidence": "SOH 하나만으로 결론 내리지 말고 블록 전압 편차, 온도, 냉각 계통, 동반 코드를 함께 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2016/SB-10096082-5448.pdf",
+      "sourceScope": "미국 2013–2014 Camry HV · 원문 VIN 분기 확인 필요",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "토요타",
+        "model": "Camry HV",
+        "region": "북미",
+        "modelYears": "2013–2014 · 원문 VIN 분기 확인",
+        "powertrain": "하이브리드",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "SOH와 블록 전압 편차 함께 기록",
+        "배터리 흡입구·팬 오염 확인",
+        "제조사 세부 코드 확인"
+      ],
+      "limitations": "배터리 열화율 산정 방식은 제조사와 차량마다 달라 직접 비교할 수 없습니다.",
+      "sourceId": "nhtsa-toyota-t-sb-0049-14",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD"
+    },
+    {
+      "code": "P0AA6",
+      "title": "고전압 배터리 전압 시스템 절연 이상",
+      "explanation": "고전압 계통과 차체 사이의 전기적 절연이 기준보다 낮다고 감지된 코드입니다. 누수, 냉각수, 배선·커넥터, 구동 모터나 배터리 내부 이상 등 여러 원인이 가능합니다.",
+      "evidence": "충전 불가·출력 제한 여부와 동반 코드를 저장하고 제조사 절연 진단 절차를 따라야 합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125162-9999.pdf",
+      "sourceScope": "북미 2017 IONIQ Hybrid 일부 차량 · 캠페인 대상 확인 필요",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "현대",
+        "model": "IONIQ Hybrid",
+        "region": "북미",
+        "modelYears": "2017 · 캠페인 대상 확인",
+        "powertrain": "하이브리드",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "충전·READY 가능 여부와 경고 문구 기록",
+        "동반 고전압·냉각 계통 코드 저장",
+        "견인과 제조사 절연 진단 요청"
+      ],
+      "limitations": "절연 고장은 감전·화재 위험과 관련될 수 있습니다. 고전압 부품을 만지거나 코드를 반복 삭제하지 마세요.",
+      "sourceId": "nhtsa-hma-17-01-057-1",
       "verificationGrade": "OEM_DOCUMENT",
       "codeScope": "COMMON_OBD"
     }
