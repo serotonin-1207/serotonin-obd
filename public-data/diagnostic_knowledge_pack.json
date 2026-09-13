@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026.09.13-public.4",
+  "version": "2026.09.13-public.5",
   "publishedAt": "2026-09-13",
   "license": "프로젝트 자체 작성 해설은 저장소 LICENSE 적용. 연결된 제3자 원문은 포함하지 않음.",
   "sources": [
@@ -142,6 +142,156 @@
       "grade": "OEM_DOCUMENT",
       "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
       "coverage": "북미 2017 IONIQ Hybrid 일부 차량 · 캠페인 대상 확인 필요",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-vw-golf-dtc-2014",
+      "publisher": "Volkswagen Group of America · NHTSA 공개본",
+      "title": "2014 Golf·GTI DTC 기준표",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-audi-tt-dtc-2013",
+      "publisher": "Audi of America · NHTSA 공개본",
+      "title": "2013 TT DTC 기준표",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10124031-9999.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "미국 2013 Audi TT · 엔진별 기준표",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-subaru-09-115-24r",
+      "publisher": "Subaru of America · NHTSA 공개본",
+      "title": "09-115-24R 산소센서 설계 변경 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11008258-0001.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "미국 2017–2024 Subaru 일부 차종 · 원문 적용표 기준",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-ford-ssm-49050",
+      "publisher": "Ford Motor Company · NHTSA 공개본",
+      "title": "SSM 49050 연료 보정 DTC 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10179316-0001.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "미국 2018–2020 F-150 5.0L Flex Fuel",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-vw-passat-dtc-2014",
+      "publisher": "Volkswagen Group of America · NHTSA 공개본",
+      "title": "2014 Passat DTC 기준표",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10122275-9999.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "미국 2014 Passat · 엔진별 기준표",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-vw-cc-dtc-2012",
+      "publisher": "Volkswagen Group of America · NHTSA 공개본",
+      "title": "2013 CC DTC 기준표",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2012/MC-10156122-9999.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "미국 2013 CC · 엔진별 기준표",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-vw-evap-2017",
+      "publisher": "Volkswagen Group of America · NHTSA 공개본",
+      "title": "V201702 증발가스 퍼지 밸브 진단 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125657-9999.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "미국 2009–2017 Volkswagen 가솔린 차량 · Routan 제외",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-vw-egr-2021",
+      "publisher": "Volkswagen Group of America · NHTSA 공개본",
+      "title": "01-18-13 P0401 EGR 유량 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10203454-0001.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "미국 2009–2014 Volkswagen 2.0L TDI 일부 차종",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-nissan-ecm-chart-2023",
+      "publisher": "Nissan North America · NHTSA 공개본",
+      "title": "엔진 제어 시스템 DTC 우선순위표",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10237505-0001.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 Nissan 엔진 제어 정비 문서 · 원문 적용 차량 확인",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-gm-24-na-050",
+      "publisher": "General Motors · NHTSA 공개본",
+      "title": "24-NA-050 전압·제어기 DTC 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11004881-0001.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 2024 Silverado·Sierra HD",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-gm-18-na-270",
+      "publisher": "General Motors · NHTSA 공개본",
+      "title": "18-NA-270 통신 배선 DTC 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10156897-9999.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 GM 일부 차량 · 원문 적용표 확인",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-audi-trans-2016",
+      "publisher": "Audi of America · NHTSA 공개본",
+      "title": "입력축 속도 센서 관련 변속기 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10128005-9999.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 Audi FlexRay·8HP 변속기 일부 차량",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-hma-20-at-003h",
+      "publisher": "Hyundai Motor America · NHTSA 공개본",
+      "title": "20-AT-003H 입력·출력 속도 센서 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10170889-0001.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 Hyundai 자동변속기 적용 차량 · 원문 적용표 기준",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-gm-21-na-003",
+      "publisher": "General Motors · NHTSA 공개본",
+      "title": "21-NA-003 CVT 동력 저하 DTC 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251351-0001.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미·GM Korea 2019–2024 일부 CVT 차량",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "id": "nhtsa-gm-p0bbd-2022",
+      "publisher": "General Motors · NHTSA 공개본",
+      "title": "P0BBD 고전압 배터리 전압 편차 공지",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10213783-9999.pdf",
+      "grade": "OEM_DOCUMENT",
+      "right": "ORIGINAL_SUMMARY_AND_LINK_ONLY",
+      "coverage": "북미 GM 전기차 · 원문 적용 차량 확인",
       "reviewedAt": "2026-09-13"
     }
   ],
@@ -1477,6 +1627,3462 @@
         "코드를 보낸 ECU와 저장·보류·영구 상태",
         "프리즈 프레임과 동반 코드",
         "SOC·SOH·셀 전압 편차·배터리 온도 및 충전 상태"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0100",
+      "title": "흡입 공기량 센서 A 회로 이상",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0102",
+      "title": "흡입 공기량 센서 A 입력 낮음",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0103",
+      "title": "흡입 공기량 센서 A 입력 높음",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0106",
+      "title": "흡기 매니폴드·대기압 센서 범위·성능 이상",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0107",
+      "title": "흡기 매니폴드·대기압 센서 입력 낮음",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0108",
+      "title": "흡기 매니폴드·대기압 센서 입력 높음",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0111",
+      "title": "흡기 온도 센서 1 범위·성능 이상",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0112",
+      "title": "흡기 온도 센서 1 입력 낮음",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0113",
+      "title": "흡기 온도 센서 1 입력 높음",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0116",
+      "title": "엔진 냉각수 온도 센서 1 범위·성능 이상",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0117",
+      "title": "엔진 냉각수 온도 센서 1 입력 낮음",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0118",
+      "title": "엔진 냉각수 온도 센서 1 입력 높음",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0121",
+      "title": "스로틀·가속 페달 위치 센서 A 범위·성능 이상",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0122",
+      "title": "스로틀·가속 페달 위치 센서 A 입력 낮음",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0123",
+      "title": "스로틀·가속 페달 위치 센서 A 입력 높음",
+      "explanation": "엔진 제어에 사용하는 공기량·압력·온도·페달 위치 신호가 정상 범위를 벗어났습니다. 센서 외에도 배선, 커넥터, 전원과 실제 계통 상태를 확인해야 합니다.",
+      "evidence": "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "프리즈 프레임과 관련 센서값, 동반 코드를 저장하고 배선과 차량별 기준을 대조합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0130",
+      "title": "산소센서 회로 이상 · 뱅크 1 센서 1",
+      "explanation": "배기가스 산소센서 신호 또는 히터 회로가 예상 범위를 벗어났습니다. 센서 외에도 배선, 배기 누설, 혼합비 이상이 영향을 줄 수 있습니다.",
+      "evidence": "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0131",
+      "title": "산소센서 회로 전압 낮음 · 뱅크 1 센서 1",
+      "explanation": "배기가스 산소센서 신호 또는 히터 회로가 예상 범위를 벗어났습니다. 센서 외에도 배선, 배기 누설, 혼합비 이상이 영향을 줄 수 있습니다.",
+      "evidence": "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0132",
+      "title": "산소센서 회로 전압 높음 · 뱅크 1 센서 1",
+      "explanation": "배기가스 산소센서 신호 또는 히터 회로가 예상 범위를 벗어났습니다. 센서 외에도 배선, 배기 누설, 혼합비 이상이 영향을 줄 수 있습니다.",
+      "evidence": "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10241730-9999.pdf",
+      "sourceScope": "미국 2014 Golf·GTI · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Golf·GTI",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-golf-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0134",
+      "title": "산소센서 회로 활동 없음 · 뱅크 1 센서 1",
+      "explanation": "배기가스 산소센서 신호 또는 히터 회로가 예상 범위를 벗어났습니다. 센서 외에도 배선, 배기 누설, 혼합비 이상이 영향을 줄 수 있습니다.",
+      "evidence": "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10124031-9999.pdf",
+      "sourceScope": "미국 2013 Audi TT · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Audi",
+        "model": "TT",
+        "region": "북미",
+        "modelYears": "2013",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-audi-tt-dtc-2013",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0135",
+      "title": "산소센서 히터 회로 이상 · 뱅크 1 센서 1",
+      "explanation": "배기가스 산소센서 신호 또는 히터 회로가 예상 범위를 벗어났습니다. 센서 외에도 배선, 배기 누설, 혼합비 이상이 영향을 줄 수 있습니다.",
+      "evidence": "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10124031-9999.pdf",
+      "sourceScope": "미국 2013 Audi TT · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Audi",
+        "model": "TT",
+        "region": "북미",
+        "modelYears": "2013",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-audi-tt-dtc-2013",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0136",
+      "title": "산소센서 회로 이상 · 뱅크 1 센서 2",
+      "explanation": "배기가스 산소센서 신호 또는 히터 회로가 예상 범위를 벗어났습니다. 센서 외에도 배선, 배기 누설, 혼합비 이상이 영향을 줄 수 있습니다.",
+      "evidence": "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10124031-9999.pdf",
+      "sourceScope": "미국 2013 Audi TT · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Audi",
+        "model": "TT",
+        "region": "북미",
+        "modelYears": "2013",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-audi-tt-dtc-2013",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0139",
+      "title": "산소센서 응답 지연 · 뱅크 1 센서 2",
+      "explanation": "배기가스 산소센서 신호 또는 히터 회로가 예상 범위를 벗어났습니다. 센서 외에도 배선, 배기 누설, 혼합비 이상이 영향을 줄 수 있습니다.",
+      "evidence": "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2013/MC-10124031-9999.pdf",
+      "sourceScope": "미국 2013 Audi TT · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Audi",
+        "model": "TT",
+        "region": "북미",
+        "modelYears": "2013",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-audi-tt-dtc-2013",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0137",
+      "title": "산소센서 회로 전압 낮음 · 뱅크 1 센서 2",
+      "explanation": "배기가스 산소센서 신호 또는 히터 회로가 예상 범위를 벗어났습니다. 센서 외에도 배선, 배기 누설, 혼합비 이상이 영향을 줄 수 있습니다.",
+      "evidence": "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11008258-0001.pdf",
+      "sourceScope": "미국 2017–2024 Subaru 일부 차종 · 원문 적용표 기준",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Subaru",
+        "model": "Legacy·Outback·Impreza·Crosstrek·Forester·BRZ",
+        "region": "북미",
+        "modelYears": "2017–2024 · 차종별 상이",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-subaru-09-115-24r",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0138",
+      "title": "산소센서 회로 전압 높음 · 뱅크 1 센서 2",
+      "explanation": "배기가스 산소센서 신호 또는 히터 회로가 예상 범위를 벗어났습니다. 센서 외에도 배선, 배기 누설, 혼합비 이상이 영향을 줄 수 있습니다.",
+      "evidence": "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11008258-0001.pdf",
+      "sourceScope": "미국 2017–2024 Subaru 일부 차종 · 원문 적용표 기준",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Subaru",
+        "model": "Legacy·Outback·Impreza·Crosstrek·Forester·BRZ",
+        "region": "북미",
+        "modelYears": "2017–2024 · 차종별 상이",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-subaru-09-115-24r",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0141",
+      "title": "산소센서 히터 회로 이상 · 뱅크 1 센서 2",
+      "explanation": "배기가스 산소센서 신호 또는 히터 회로가 예상 범위를 벗어났습니다. 센서 외에도 배선, 배기 누설, 혼합비 이상이 영향을 줄 수 있습니다.",
+      "evidence": "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11008258-0001.pdf",
+      "sourceScope": "미국 2017–2024 Subaru 일부 차종 · 원문 적용표 기준",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Subaru",
+        "model": "Legacy·Outback·Impreza·Crosstrek·Forester·BRZ",
+        "region": "북미",
+        "modelYears": "2017–2024 · 차종별 상이",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 보정값과 동반 코드를 저장하고 배기 누설·센서 배선·차량별 기준을 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-subaru-09-115-24r",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0172",
+      "title": "농후 혼합 감지 · 뱅크 1",
+      "explanation": "연료 혼합 제어, 압력 또는 분사기 회로에서 이상을 감지했습니다. 코드만으로 펌프·센서·분사기 교체를 결정할 수 없습니다.",
+      "evidence": "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10179316-0001.pdf",
+      "sourceScope": "미국 2018–2020 F-150 5.0L Flex Fuel",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Ford",
+        "model": "F-150",
+        "region": "북미",
+        "modelYears": "2018–2020",
+        "powertrain": "5.0L Flex Fuel",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-ford-ssm-49050",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0174",
+      "title": "희박 혼합 감지 · 뱅크 2",
+      "explanation": "연료 혼합 제어, 압력 또는 분사기 회로에서 이상을 감지했습니다. 코드만으로 펌프·센서·분사기 교체를 결정할 수 없습니다.",
+      "evidence": "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10179316-0001.pdf",
+      "sourceScope": "미국 2018–2020 F-150 5.0L Flex Fuel",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Ford",
+        "model": "F-150",
+        "region": "북미",
+        "modelYears": "2018–2020",
+        "powertrain": "5.0L Flex Fuel",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-ford-ssm-49050",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0175",
+      "title": "농후 혼합 감지 · 뱅크 2",
+      "explanation": "연료 혼합 제어, 압력 또는 분사기 회로에서 이상을 감지했습니다. 코드만으로 펌프·센서·분사기 교체를 결정할 수 없습니다.",
+      "evidence": "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10179316-0001.pdf",
+      "sourceScope": "미국 2018–2020 F-150 5.0L Flex Fuel",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Ford",
+        "model": "F-150",
+        "region": "북미",
+        "modelYears": "2018–2020",
+        "powertrain": "5.0L Flex Fuel",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-ford-ssm-49050",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0190",
+      "title": "연료 레일 압력 센서 A 회로 이상",
+      "explanation": "연료 혼합 제어, 압력 또는 분사기 회로에서 이상을 감지했습니다. 코드만으로 펌프·센서·분사기 교체를 결정할 수 없습니다.",
+      "evidence": "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10122275-9999.pdf",
+      "sourceScope": "미국 2014 Passat · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Passat",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-passat-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0191",
+      "title": "연료 레일 압력 센서 A 범위·성능 이상",
+      "explanation": "연료 혼합 제어, 압력 또는 분사기 회로에서 이상을 감지했습니다. 코드만으로 펌프·센서·분사기 교체를 결정할 수 없습니다.",
+      "evidence": "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10122275-9999.pdf",
+      "sourceScope": "미국 2014 Passat · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Passat",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-passat-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0192",
+      "title": "연료 레일 압력 센서 A 입력 낮음",
+      "explanation": "연료 혼합 제어, 압력 또는 분사기 회로에서 이상을 감지했습니다. 코드만으로 펌프·센서·분사기 교체를 결정할 수 없습니다.",
+      "evidence": "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10122275-9999.pdf",
+      "sourceScope": "미국 2014 Passat · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Passat",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-passat-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0193",
+      "title": "연료 레일 압력 센서 A 입력 높음",
+      "explanation": "연료 혼합 제어, 압력 또는 분사기 회로에서 이상을 감지했습니다. 코드만으로 펌프·센서·분사기 교체를 결정할 수 없습니다.",
+      "evidence": "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10122275-9999.pdf",
+      "sourceScope": "미국 2014 Passat · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Passat",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-passat-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0201",
+      "title": "1번 실린더 연료분사기 회로 이상",
+      "explanation": "연료 혼합 제어, 압력 또는 분사기 회로에서 이상을 감지했습니다. 코드만으로 펌프·센서·분사기 교체를 결정할 수 없습니다.",
+      "evidence": "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10122275-9999.pdf",
+      "sourceScope": "미국 2014 Passat · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Passat",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-passat-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0202",
+      "title": "2번 실린더 연료분사기 회로 이상",
+      "explanation": "연료 혼합 제어, 압력 또는 분사기 회로에서 이상을 감지했습니다. 코드만으로 펌프·센서·분사기 교체를 결정할 수 없습니다.",
+      "evidence": "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10122275-9999.pdf",
+      "sourceScope": "미국 2014 Passat · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Passat",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-passat-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0203",
+      "title": "3번 실린더 연료분사기 회로 이상",
+      "explanation": "연료 혼합 제어, 압력 또는 분사기 회로에서 이상을 감지했습니다. 코드만으로 펌프·센서·분사기 교체를 결정할 수 없습니다.",
+      "evidence": "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10122275-9999.pdf",
+      "sourceScope": "미국 2014 Passat · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Passat",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-passat-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0204",
+      "title": "4번 실린더 연료분사기 회로 이상",
+      "explanation": "연료 혼합 제어, 압력 또는 분사기 회로에서 이상을 감지했습니다. 코드만으로 펌프·센서·분사기 교체를 결정할 수 없습니다.",
+      "evidence": "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2014/MC-10122275-9999.pdf",
+      "sourceScope": "미국 2014 Passat · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Passat",
+        "region": "북미",
+        "modelYears": "2014",
+        "powertrain": "가솔린·디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 압력과 보정값, 실화 코드, 발생 조건을 저장하고 누설·배선·차량별 점검 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-passat-dtc-2014",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0325",
+      "title": "노크 센서 1 회로 이상",
+      "explanation": "점화·노크·캠축 위치 계통의 신호 또는 회로가 정상 범위를 벗어났습니다. 센서·코일 외에도 배선, 전원, 기계적 타이밍이 관련될 수 있습니다.",
+      "evidence": "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2012/MC-10156122-9999.pdf",
+      "sourceScope": "미국 2013 CC · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "CC",
+        "region": "북미",
+        "modelYears": "2013",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-cc-dtc-2012",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0340",
+      "title": "캠축 위치 센서 A 회로 이상 · 뱅크 1",
+      "explanation": "점화·노크·캠축 위치 계통의 신호 또는 회로가 정상 범위를 벗어났습니다. 센서·코일 외에도 배선, 전원, 기계적 타이밍이 관련될 수 있습니다.",
+      "evidence": "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2012/MC-10156122-9999.pdf",
+      "sourceScope": "미국 2013 CC · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "CC",
+        "region": "북미",
+        "modelYears": "2013",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-cc-dtc-2012",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0341",
+      "title": "캠축 위치 센서 A 범위·성능 이상 · 뱅크 1",
+      "explanation": "점화·노크·캠축 위치 계통의 신호 또는 회로가 정상 범위를 벗어났습니다. 센서·코일 외에도 배선, 전원, 기계적 타이밍이 관련될 수 있습니다.",
+      "evidence": "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2012/MC-10156122-9999.pdf",
+      "sourceScope": "미국 2013 CC · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "CC",
+        "region": "북미",
+        "modelYears": "2013",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-cc-dtc-2012",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0342",
+      "title": "캠축 위치 센서 A 입력 낮음 · 뱅크 1",
+      "explanation": "점화·노크·캠축 위치 계통의 신호 또는 회로가 정상 범위를 벗어났습니다. 센서·코일 외에도 배선, 전원, 기계적 타이밍이 관련될 수 있습니다.",
+      "evidence": "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2012/MC-10156122-9999.pdf",
+      "sourceScope": "미국 2013 CC · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "CC",
+        "region": "북미",
+        "modelYears": "2013",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-cc-dtc-2012",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0343",
+      "title": "캠축 위치 센서 A 입력 높음 · 뱅크 1",
+      "explanation": "점화·노크·캠축 위치 계통의 신호 또는 회로가 정상 범위를 벗어났습니다. 센서·코일 외에도 배선, 전원, 기계적 타이밍이 관련될 수 있습니다.",
+      "evidence": "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2012/MC-10156122-9999.pdf",
+      "sourceScope": "미국 2013 CC · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "CC",
+        "region": "북미",
+        "modelYears": "2013",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-cc-dtc-2012",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0351",
+      "title": "점화 코일 A 1차·2차 회로 이상",
+      "explanation": "점화·노크·캠축 위치 계통의 신호 또는 회로가 정상 범위를 벗어났습니다. 센서·코일 외에도 배선, 전원, 기계적 타이밍이 관련될 수 있습니다.",
+      "evidence": "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2012/MC-10156122-9999.pdf",
+      "sourceScope": "미국 2013 CC · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "CC",
+        "region": "북미",
+        "modelYears": "2013",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-cc-dtc-2012",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0352",
+      "title": "점화 코일 B 1차·2차 회로 이상",
+      "explanation": "점화·노크·캠축 위치 계통의 신호 또는 회로가 정상 범위를 벗어났습니다. 센서·코일 외에도 배선, 전원, 기계적 타이밍이 관련될 수 있습니다.",
+      "evidence": "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2012/MC-10156122-9999.pdf",
+      "sourceScope": "미국 2013 CC · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "CC",
+        "region": "북미",
+        "modelYears": "2013",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-cc-dtc-2012",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0353",
+      "title": "점화 코일 C 1차·2차 회로 이상",
+      "explanation": "점화·노크·캠축 위치 계통의 신호 또는 회로가 정상 범위를 벗어났습니다. 센서·코일 외에도 배선, 전원, 기계적 타이밍이 관련될 수 있습니다.",
+      "evidence": "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2012/MC-10156122-9999.pdf",
+      "sourceScope": "미국 2013 CC · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "CC",
+        "region": "북미",
+        "modelYears": "2013",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-cc-dtc-2012",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0354",
+      "title": "점화 코일 D 1차·2차 회로 이상",
+      "explanation": "점화·노크·캠축 위치 계통의 신호 또는 회로가 정상 범위를 벗어났습니다. 센서·코일 외에도 배선, 전원, 기계적 타이밍이 관련될 수 있습니다.",
+      "evidence": "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2012/MC-10156122-9999.pdf",
+      "sourceScope": "미국 2013 CC · 엔진별 기준표",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "CC",
+        "region": "북미",
+        "modelYears": "2013",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "실화와 동반 위치 센서 코드, 엔진 회전수, 발생 조건을 저장하고 차량별 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-cc-dtc-2012",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0401",
+      "title": "배기가스 재순환 유량 부족 감지",
+      "explanation": "엔진 제어기가 해당 계통의 작동 결과가 기준에 맞지 않는다고 판단했습니다.",
+      "evidence": "발생 조건과 동반 코드를 저장하고 차량별 제조사 진단 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10203454-0001.pdf",
+      "sourceScope": "미국 2009–2014 Volkswagen 2.0L TDI 일부 차종",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "Jetta·Golf·Beetle 계열",
+        "region": "북미",
+        "modelYears": "2009–2014",
+        "powertrain": "2.0L 디젤",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "발생 조건과 동반 코드를 저장하고 차량별 제조사 진단 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-egr-2021",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0440",
+      "title": "증발가스 제어 계통 이상",
+      "explanation": "연료 증발가스를 저장하고 엔진으로 보내는 계통에서 누설·유량 또는 전기 회로 이상을 감지했습니다.",
+      "evidence": "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125657-9999.pdf",
+      "sourceScope": "미국 2009–2017 Volkswagen 가솔린 차량 · Routan 제외",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "다수 차종",
+        "region": "북미",
+        "modelYears": "2009–2017",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-evap-2017",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0441",
+      "title": "증발가스 퍼지 유량 이상",
+      "explanation": "연료 증발가스를 저장하고 엔진으로 보내는 계통에서 누설·유량 또는 전기 회로 이상을 감지했습니다.",
+      "evidence": "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125657-9999.pdf",
+      "sourceScope": "미국 2009–2017 Volkswagen 가솔린 차량 · Routan 제외",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "다수 차종",
+        "region": "북미",
+        "modelYears": "2009–2017",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-evap-2017",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0443",
+      "title": "증발가스 퍼지 제어 밸브 회로 이상",
+      "explanation": "연료 증발가스를 저장하고 엔진으로 보내는 계통에서 누설·유량 또는 전기 회로 이상을 감지했습니다.",
+      "evidence": "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125657-9999.pdf",
+      "sourceScope": "미국 2009–2017 Volkswagen 가솔린 차량 · Routan 제외",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "다수 차종",
+        "region": "북미",
+        "modelYears": "2009–2017",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-evap-2017",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0444",
+      "title": "증발가스 퍼지 제어 밸브 회로 단선",
+      "explanation": "연료 증발가스를 저장하고 엔진으로 보내는 계통에서 누설·유량 또는 전기 회로 이상을 감지했습니다.",
+      "evidence": "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125657-9999.pdf",
+      "sourceScope": "미국 2009–2017 Volkswagen 가솔린 차량 · Routan 제외",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "다수 차종",
+        "region": "북미",
+        "modelYears": "2009–2017",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-evap-2017",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0445",
+      "title": "증발가스 퍼지 제어 밸브 회로 단락",
+      "explanation": "연료 증발가스를 저장하고 엔진으로 보내는 계통에서 누설·유량 또는 전기 회로 이상을 감지했습니다.",
+      "evidence": "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125657-9999.pdf",
+      "sourceScope": "미국 2009–2017 Volkswagen 가솔린 차량 · Routan 제외",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "다수 차종",
+        "region": "북미",
+        "modelYears": "2009–2017",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-evap-2017",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0449",
+      "title": "증발가스 벤트 밸브·솔레노이드 회로 이상",
+      "explanation": "연료 증발가스를 저장하고 엔진으로 보내는 계통에서 누설·유량 또는 전기 회로 이상을 감지했습니다.",
+      "evidence": "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125657-9999.pdf",
+      "sourceScope": "미국 2009–2017 Volkswagen 가솔린 차량 · Routan 제외",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "다수 차종",
+        "region": "북미",
+        "modelYears": "2009–2017",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-evap-2017",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0452",
+      "title": "증발가스 압력 센서 입력 낮음",
+      "explanation": "연료 증발가스를 저장하고 엔진으로 보내는 계통에서 누설·유량 또는 전기 회로 이상을 감지했습니다.",
+      "evidence": "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125657-9999.pdf",
+      "sourceScope": "미국 2009–2017 Volkswagen 가솔린 차량 · Routan 제외",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "다수 차종",
+        "region": "북미",
+        "modelYears": "2009–2017",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-evap-2017",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0453",
+      "title": "증발가스 압력 센서 입력 높음",
+      "explanation": "연료 증발가스를 저장하고 엔진으로 보내는 계통에서 누설·유량 또는 전기 회로 이상을 감지했습니다.",
+      "evidence": "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125657-9999.pdf",
+      "sourceScope": "미국 2009–2017 Volkswagen 가솔린 차량 · Routan 제외",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "다수 차종",
+        "region": "북미",
+        "modelYears": "2009–2017",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-evap-2017",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0459",
+      "title": "증발가스 퍼지 제어 밸브 회로 입력 높음",
+      "explanation": "연료 증발가스를 저장하고 엔진으로 보내는 계통에서 누설·유량 또는 전기 회로 이상을 감지했습니다.",
+      "evidence": "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2017/MC-10125657-9999.pdf",
+      "sourceScope": "미국 2009–2017 Volkswagen 가솔린 차량 · Routan 제외",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Volkswagen",
+        "model": "다수 차종",
+        "region": "북미",
+        "modelYears": "2009–2017",
+        "powertrain": "가솔린",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "연료 주입 직후 여부와 동반 코드를 기록하고 연료캡·호스·밸브·배선의 차량별 점검 순서를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-vw-evap-2017",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0500",
+      "title": "차량 속도 센서 A 회로 이상",
+      "explanation": "엔진 제어기가 해당 계통의 작동 결과가 기준에 맞지 않는다고 판단했습니다.",
+      "evidence": "발생 조건과 동반 코드를 저장하고 차량별 제조사 진단 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10237505-0001.pdf",
+      "sourceScope": "북미 Nissan 엔진 제어 정비 문서 · 원문 적용 차량 확인",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Nissan",
+        "model": "원문 적용 차량",
+        "region": "북미",
+        "modelYears": "원문 확인 필요",
+        "powertrain": "내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "발생 조건과 동반 코드를 저장하고 차량별 제조사 진단 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-nissan-ecm-chart-2023",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0501",
+      "title": "차량 속도 센서 A 범위·성능 이상",
+      "explanation": "엔진 제어기가 해당 계통의 작동 결과가 기준에 맞지 않는다고 판단했습니다.",
+      "evidence": "발생 조건과 동반 코드를 저장하고 차량별 제조사 진단 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2023/MC-10237505-0001.pdf",
+      "sourceScope": "북미 Nissan 엔진 제어 정비 문서 · 원문 적용 차량 확인",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Nissan",
+        "model": "원문 적용 차량",
+        "region": "북미",
+        "modelYears": "원문 확인 필요",
+        "powertrain": "내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "발생 조건과 동반 코드를 저장하고 차량별 제조사 진단 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-nissan-ecm-chart-2023",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0562",
+      "title": "시스템 전압 낮음",
+      "explanation": "엔진 제어기가 해당 계통의 작동 결과가 기준에 맞지 않는다고 판단했습니다.",
+      "evidence": "발생 조건과 동반 코드를 저장하고 차량별 제조사 진단 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11004881-0001.pdf",
+      "sourceScope": "북미 2024 Silverado·Sierra HD",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "GM",
+        "model": "Silverado·Sierra HD",
+        "region": "북미",
+        "modelYears": "2024",
+        "powertrain": "내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "발생 조건과 동반 코드를 저장하고 차량별 제조사 진단 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-gm-24-na-050",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0563",
+      "title": "시스템 전압 높음",
+      "explanation": "엔진 제어기가 해당 계통의 작동 결과가 기준에 맞지 않는다고 판단했습니다.",
+      "evidence": "발생 조건과 동반 코드를 저장하고 차량별 제조사 진단 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11004881-0001.pdf",
+      "sourceScope": "북미 2024 Silverado·Sierra HD",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "GM",
+        "model": "Silverado·Sierra HD",
+        "region": "북미",
+        "modelYears": "2024",
+        "powertrain": "내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "발생 조건과 동반 코드를 저장하고 차량별 제조사 진단 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-gm-24-na-050",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0606",
+      "title": "제어 모듈 프로세서 성능 이상",
+      "explanation": "엔진 제어기가 해당 계통의 작동 결과가 기준에 맞지 않는다고 판단했습니다.",
+      "evidence": "발생 조건과 동반 코드를 저장하고 차량별 제조사 진단 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2024/MC-11004881-0001.pdf",
+      "sourceScope": "북미 2024 Silverado·Sierra HD",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "GM",
+        "model": "Silverado·Sierra HD",
+        "region": "북미",
+        "modelYears": "2024",
+        "powertrain": "내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "발생 조건과 동반 코드를 저장하고 차량별 제조사 진단 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-gm-24-na-050",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때 증상 기록",
+        "최근 정비·주유·방전 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0700",
+      "title": "변속기 제어 계통의 경고등 점등 요청",
+      "explanation": "변속기 제어기가 속도·기어비 또는 내부 제어 상태에 이상을 감지했습니다. 센서, 배선, 오일·유압, 기계적 문제를 구분해야 합니다.",
+      "evidence": "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10156897-9999.pdf",
+      "sourceScope": "북미 GM 일부 차량 · 원문 적용표 확인",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "GM",
+        "model": "원문 적용 차량",
+        "region": "북미",
+        "modelYears": "원문 확인 필요",
+        "powertrain": "내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-gm-18-na-270",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "변속 충격·미끄러짐이 발생한 속도 기록",
+        "주차 위치의 누유 흔적 육안 확인",
+        "변속 경고나 출력 제한 상태 촬영"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "U0100",
+      "title": "엔진·파워트레인 제어 모듈과 통신 두절",
+      "explanation": "차량 통신망에서 해당 제어 모듈의 응답이 끊겼습니다. 전원 저하, 배선·커넥터, 통신망 또는 모듈 상태를 함께 확인해야 합니다.",
+      "evidence": "여러 ECU의 통신 코드와 12V 전압, 발생 순서를 보존하고 차량별 통신망 진단 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10156897-9999.pdf",
+      "sourceScope": "북미 GM 일부 차량 · 원문 적용표 확인",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "GM",
+        "model": "원문 적용 차량",
+        "region": "북미",
+        "modelYears": "원문 확인 필요",
+        "powertrain": "내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "여러 ECU의 통신 코드와 12V 전압, 발생 순서를 보존하고 차량별 통신망 진단 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-gm-18-na-270",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "동시에 켜진 모든 경고등 촬영",
+        "시동·계기판·변속 이상 발생 순서 기록",
+        "최근 12V 방전·점프 시동 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "U0101",
+      "title": "변속기 제어 모듈과 통신 두절",
+      "explanation": "차량 통신망에서 해당 제어 모듈의 응답이 끊겼습니다. 전원 저하, 배선·커넥터, 통신망 또는 모듈 상태를 함께 확인해야 합니다.",
+      "evidence": "여러 ECU의 통신 코드와 12V 전압, 발생 순서를 보존하고 차량별 통신망 진단 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10156897-9999.pdf",
+      "sourceScope": "북미 GM 일부 차량 · 원문 적용표 확인",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "GM",
+        "model": "원문 적용 차량",
+        "region": "북미",
+        "modelYears": "원문 확인 필요",
+        "powertrain": "내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "여러 ECU의 통신 코드와 12V 전압, 발생 순서를 보존하고 차량별 통신망 진단 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-gm-18-na-270",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "동시에 켜진 모든 경고등 촬영",
+        "시동·계기판·변속 이상 발생 순서 기록",
+        "최근 12V 방전·점프 시동 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "U0121",
+      "title": "ABS·브레이크 제어 모듈과 통신 두절",
+      "explanation": "차량 통신망에서 해당 제어 모듈의 응답이 끊겼습니다. 전원 저하, 배선·커넥터, 통신망 또는 모듈 상태를 함께 확인해야 합니다.",
+      "evidence": "여러 ECU의 통신 코드와 12V 전압, 발생 순서를 보존하고 차량별 통신망 진단 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10156897-9999.pdf",
+      "sourceScope": "북미 GM 일부 차량 · 원문 적용표 확인",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "GM",
+        "model": "원문 적용 차량",
+        "region": "북미",
+        "modelYears": "원문 확인 필요",
+        "powertrain": "내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "여러 ECU의 통신 코드와 12V 전압, 발생 순서를 보존하고 차량별 통신망 진단 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-gm-18-na-270",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "동시에 켜진 모든 경고등 촬영",
+        "시동·계기판·변속 이상 발생 순서 기록",
+        "최근 12V 방전·점프 시동 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "U0140",
+      "title": "차체 제어 모듈과 통신 두절",
+      "explanation": "차량 통신망에서 해당 제어 모듈의 응답이 끊겼습니다. 전원 저하, 배선·커넥터, 통신망 또는 모듈 상태를 함께 확인해야 합니다.",
+      "evidence": "여러 ECU의 통신 코드와 12V 전압, 발생 순서를 보존하고 차량별 통신망 진단 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2019/MC-10156897-9999.pdf",
+      "sourceScope": "북미 GM 일부 차량 · 원문 적용표 확인",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "GM",
+        "model": "원문 적용 차량",
+        "region": "북미",
+        "modelYears": "원문 확인 필요",
+        "powertrain": "내연기관",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "여러 ECU의 통신 코드와 12V 전압, 발생 순서를 보존하고 차량별 통신망 진단 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-gm-18-na-270",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "동시에 켜진 모든 경고등 촬영",
+        "시동·계기판·변속 이상 발생 순서 기록",
+        "최근 12V 방전·점프 시동 여부 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0715",
+      "title": "입력·터빈 속도 센서 A 회로 이상",
+      "explanation": "변속기 제어기가 속도·기어비 또는 내부 제어 상태에 이상을 감지했습니다. 센서, 배선, 오일·유압, 기계적 문제를 구분해야 합니다.",
+      "evidence": "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10128005-9999.pdf",
+      "sourceScope": "북미 Audi FlexRay·8HP 변속기 일부 차량",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Audi",
+        "model": "원문 적용 차량",
+        "region": "북미",
+        "modelYears": "원문 확인 필요",
+        "powertrain": "8단 자동변속기",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-audi-trans-2016",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "변속 충격·미끄러짐이 발생한 속도 기록",
+        "주차 위치의 누유 흔적 육안 확인",
+        "변속 경고나 출력 제한 상태 촬영"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0716",
+      "title": "입력·터빈 속도 센서 A 범위·성능 이상",
+      "explanation": "변속기 제어기가 속도·기어비 또는 내부 제어 상태에 이상을 감지했습니다. 센서, 배선, 오일·유압, 기계적 문제를 구분해야 합니다.",
+      "evidence": "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2016/MC-10128005-9999.pdf",
+      "sourceScope": "북미 Audi FlexRay·8HP 변속기 일부 차량",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Audi",
+        "model": "원문 적용 차량",
+        "region": "북미",
+        "modelYears": "원문 확인 필요",
+        "powertrain": "8단 자동변속기",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-audi-trans-2016",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "변속 충격·미끄러짐이 발생한 속도 기록",
+        "주차 위치의 누유 흔적 육안 확인",
+        "변속 경고나 출력 제한 상태 촬영"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0717",
+      "title": "입력·터빈 속도 센서 A 신호 없음",
+      "explanation": "변속기 제어기가 속도·기어비 또는 내부 제어 상태에 이상을 감지했습니다. 센서, 배선, 오일·유압, 기계적 문제를 구분해야 합니다.",
+      "evidence": "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10170889-0001.pdf",
+      "sourceScope": "북미 Hyundai 자동변속기 적용 차량 · 원문 적용표 기준",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Hyundai",
+        "model": "원문 적용 차량",
+        "region": "북미",
+        "modelYears": "원문 확인 필요",
+        "powertrain": "자동변속기",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-hma-20-at-003h",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "변속 충격·미끄러짐이 발생한 속도 기록",
+        "주차 위치의 누유 흔적 육안 확인",
+        "변속 경고나 출력 제한 상태 촬영"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0721",
+      "title": "출력 속도 센서 범위·성능 이상",
+      "explanation": "변속기 제어기가 속도·기어비 또는 내부 제어 상태에 이상을 감지했습니다. 센서, 배선, 오일·유압, 기계적 문제를 구분해야 합니다.",
+      "evidence": "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10170889-0001.pdf",
+      "sourceScope": "북미 Hyundai 자동변속기 적용 차량 · 원문 적용표 기준",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Hyundai",
+        "model": "원문 적용 차량",
+        "region": "북미",
+        "modelYears": "원문 확인 필요",
+        "powertrain": "자동변속기",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-hma-20-at-003h",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "변속 충격·미끄러짐이 발생한 속도 기록",
+        "주차 위치의 누유 흔적 육안 확인",
+        "변속 경고나 출력 제한 상태 촬영"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0722",
+      "title": "출력 속도 센서 신호 없음",
+      "explanation": "변속기 제어기가 속도·기어비 또는 내부 제어 상태에 이상을 감지했습니다. 센서, 배선, 오일·유압, 기계적 문제를 구분해야 합니다.",
+      "evidence": "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2020/MC-10170889-0001.pdf",
+      "sourceScope": "북미 Hyundai 자동변속기 적용 차량 · 원문 적용표 기준",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "Hyundai",
+        "model": "원문 적용 차량",
+        "region": "북미",
+        "modelYears": "원문 확인 필요",
+        "powertrain": "자동변속기",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-hma-20-at-003h",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "변속 충격·미끄러짐이 발생한 속도 기록",
+        "주차 위치의 누유 흔적 육안 확인",
+        "변속 경고나 출력 제한 상태 촬영"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0730",
+      "title": "변속기 기어비 이상",
+      "explanation": "변속기 제어기가 속도·기어비 또는 내부 제어 상태에 이상을 감지했습니다. 센서, 배선, 오일·유압, 기계적 문제를 구분해야 합니다.",
+      "evidence": "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2024/MC-10251351-0001.pdf",
+      "sourceScope": "북미·GM Korea 2019–2024 일부 CVT 차량",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "GM",
+        "model": "Encore GX·Malibu·Trailblazer",
+        "region": "북미",
+        "modelYears": "2019–2024 · 차종별 상이",
+        "powertrain": "VT40 CVT",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "변속 이상이 발생한 속도·단수와 동반 변속기 코드를 기록하고 제조사 절차로 점검합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-gm-21-na-003",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "변속 충격·미끄러짐이 발생한 속도 기록",
+        "주차 위치의 누유 흔적 육안 확인",
+        "변속 경고나 출력 제한 상태 촬영"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·전압 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
+    },
+    {
+      "code": "P0BBD",
+      "title": "구동 배터리 팩 전압 편차 한계 초과",
+      "explanation": "고전압 배터리 셀 또는 모듈 사이의 전압 편차가 허용 범위를 넘었다고 판단되었습니다. 코드만으로 교체 범위를 확정할 수 없습니다.",
+      "evidence": "배터리 블록 전압·온도·SOC와 동반 코드를 저장하고 제조사 고전압 진단 절차를 확인합니다.",
+      "sourceUrl": "https://static.nhtsa.gov/odi/tsbs/2022/MC-10213783-9999.pdf",
+      "sourceScope": "북미 GM 전기차 · 원문 적용 차량 확인",
+      "reviewedAt": "2026-09-13",
+      "verification": "제조사 공개 문서 대조 · 국내 동일 차명·사양 적용 미검증",
+      "applicability": {
+        "manufacturer": "GM",
+        "model": "원문 적용 전기차",
+        "region": "북미",
+        "modelYears": "원문 확인 필요",
+        "powertrain": "전기차",
+        "domesticVerified": false
+      },
+      "redistribution": "자체 작성 해설만 배포 · 원문과 그림의 재배포 권한 미확보",
+      "sourceLabel": "제조사 공개 문서",
+      "nextChecks": [
+        "배터리 블록 전압·온도·SOC와 동반 코드를 저장하고 제조사 고전압 진단 절차를 확인합니다.",
+        "커넥터·배선·전원 상태 확인",
+        "부품 교체 전에 차량별 제조사 절차 대조"
+      ],
+      "limitations": "연결된 제조사 문서의 수리 사례는 원문 적용 차량에만 해당하며 다른 차량의 원인을 확정하지 않습니다.",
+      "sourceId": "nhtsa-gm-p0bbd-2022",
+      "verificationGrade": "OEM_DOCUMENT",
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속·제동 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "계기판 고전압 경고와 주행 가능 거리 촬영",
+        "READY·충전 가능 여부 기록",
+        "냄새·누수·발열이 있으면 접촉하지 않기"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "SOC·SOH·셀 전압 편차·배터리 온도"
       ],
       "beforeClear": [
         "전체 코드와 ECU·상태",

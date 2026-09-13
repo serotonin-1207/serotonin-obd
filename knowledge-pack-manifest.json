@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "revision": 4,
-  "packVersion": "2026.09.13-public.4",
+  "revision": 5,
+  "packVersion": "2026.09.13-public.5",
   "publishedAt": "2026-09-13",
   "minAppVersionCode": 2,
   "packUrl": "https://raw.githubusercontent.com/serotonin-1207/serotonin-obd/main/public-data/diagnostic_knowledge_pack.json",
-  "sha256": "978b72bcec680d59d9258aa844700ac1e4fcf7e3d2d427c2ef112fd3bb0d845e",
+  "sha256": "a99d5d7e766dece330c12b0c8a8dfe9eab2c0d40cffe5c11c0491db725af0e0f",
   "signatureAlgorithm": "SHA256withECDSA",
-  "signatureBase64": "MEYCIQDt6UaKxM1uBIIknwz39IJsf6KHj6Avn/cJOqdAlpCCnAIhAInoMqBnfTzsYCr23QozfeRjdyU/qD/fFnTzNX1VGOSC"
+  "signatureBase64": "MEUCIQDgqIIVCYOMXYNhNiuY14Xekp1ULe6jXFODCLdFAwLJMwIgDaCHPmF0bVzEQdaxV1OCJXt6Bg/k2v4ImMDep4/ZqOU="
 }
