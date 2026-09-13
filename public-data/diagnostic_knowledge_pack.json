@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026.09.13-public.3",
+  "version": "2026.09.13-public.4",
   "publishedAt": "2026-09-13",
   "license": "프로젝트 자체 작성 해설은 저장소 LICENSE 적용. 연결된 제3자 원문은 포함하지 않음.",
   "sources": [
@@ -169,7 +169,26 @@
       "limitations": "",
       "sourceId": "nhtsa-hma-p0300-tsb-2013",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0171",
@@ -194,7 +213,26 @@
       "limitations": "",
       "sourceId": "nhtsa-kma-eng160-2016",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0420",
@@ -219,7 +257,26 @@
       "limitations": "",
       "sourceId": "nhtsa-hma-tucson-p0420-2020",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P33ED-00",
@@ -248,7 +305,26 @@
       "limitations": "북미 공지는 국내 리콜 대상 또는 보증 적용을 확정하지 않습니다. 과거 코드도 해당 캠페인에서는 판단 대상입니다.",
       "sourceId": "nhtsa-nissan-ntb26-029",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "MANUFACTURER_SPECIFIC"
+      "codeScope": "MANUFACTURER_SPECIFIC",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "계기판 경고 문구와 색상 촬영",
+        "READY·충전 가능 여부 기록",
+        "타는 냄새·누수·비정상 발열은 접촉하지 말고 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "SOC·SOH·셀 전압 편차·배터리 온도 및 충전 상태"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P3180-97",
@@ -277,7 +353,26 @@
       "limitations": "이 공지는 P3180-97 전체 정의를 제공하지 않습니다. 배터리나 제어기 교체를 이 코드만으로 결정하지 않습니다.",
       "sourceId": "nhtsa-nissan-ntb26-029",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "MANUFACTURER_SPECIFIC"
+      "codeScope": "MANUFACTURER_SPECIFIC",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "계기판 경고 문구와 색상 촬영",
+        "READY·충전 가능 여부 기록",
+        "타는 냄새·누수·비정상 발열은 접촉하지 말고 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "SOC·SOH·셀 전압 편차·배터리 온도 및 충전 상태"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P317E-97",
@@ -306,7 +401,26 @@
       "limitations": "다른 코드와 함께 수신되었다는 사실만으로 동일 원인이라고 판단할 수 없습니다.",
       "sourceId": "",
       "verificationGrade": "UNVERIFIED",
-      "codeScope": "MANUFACTURER_SPECIFIC"
+      "codeScope": "MANUFACTURER_SPECIFIC",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "계기판 경고 문구와 색상 촬영",
+        "READY·충전 가능 여부 기록",
+        "타는 냄새·누수·비정상 발열은 접촉하지 말고 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "SOC·SOH·셀 전압 편차·배터리 온도 및 충전 상태"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0301",
@@ -335,7 +449,26 @@
       "limitations": "공개 공지는 제한된 차량의 인젝터 사례입니다. 다른 제조사·엔진에서 같은 코드가 인젝터 교체를 뜻하지 않습니다.",
       "sourceId": "nhtsa-kia-fue066-2024",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0302",
@@ -364,7 +497,26 @@
       "limitations": "공개 공지는 제한된 차량의 인젝터 사례입니다. 다른 제조사·엔진에서 같은 코드가 인젝터 교체를 뜻하지 않습니다.",
       "sourceId": "nhtsa-kia-fue066-2024",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0303",
@@ -393,7 +545,26 @@
       "limitations": "공개 공지는 제한된 차량의 인젝터 사례입니다. 다른 제조사·엔진에서 같은 코드가 인젝터 교체를 뜻하지 않습니다.",
       "sourceId": "nhtsa-kia-fue066-2024",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0304",
@@ -422,7 +593,26 @@
       "limitations": "공개 공지는 제한된 차량의 인젝터 사례입니다. 다른 제조사·엔진에서 같은 코드가 인젝터 교체를 뜻하지 않습니다.",
       "sourceId": "nhtsa-kia-fue066-2024",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0442",
@@ -452,7 +642,26 @@
       "limitations": "원문의 소금 침전·NVLD 사례는 해당 북미 쏘나타 하이브리드에만 적용됩니다. 국내 차량이나 다른 차종의 원인으로 자동 적용하지 않습니다.",
       "sourceId": "nhtsa-hma-21-fl-002h",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "계기판 경고 문구와 색상 촬영",
+        "READY·충전 가능 여부 기록",
+        "타는 냄새·누수·비정상 발열은 접촉하지 말고 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "SOC·SOH·셀 전압 편차·배터리 온도 및 충전 상태"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0455",
@@ -482,7 +691,26 @@
       "limitations": "원문의 소금 침전·NVLD 사례는 해당 북미 쏘나타 하이브리드에만 적용됩니다. 국내 차량이나 다른 차종의 원인으로 자동 적용하지 않습니다.",
       "sourceId": "nhtsa-hma-21-fl-002h",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "계기판 경고 문구와 색상 촬영",
+        "READY·충전 가능 여부 기록",
+        "타는 냄새·누수·비정상 발열은 접촉하지 말고 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "SOC·SOH·셀 전압 편차·배터리 온도 및 충전 상태"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0456",
@@ -512,7 +740,26 @@
       "limitations": "원문의 소금 침전·NVLD 사례는 해당 북미 쏘나타 하이브리드에만 적용됩니다. 국내 차량이나 다른 차종의 원인으로 자동 적용하지 않습니다.",
       "sourceId": "nhtsa-hma-21-fl-002h",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "계기판 경고 문구와 색상 촬영",
+        "READY·충전 가능 여부 기록",
+        "타는 냄새·누수·비정상 발열은 접촉하지 말고 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "SOC·SOH·셀 전압 편차·배터리 온도 및 충전 상태"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0128",
@@ -542,7 +789,26 @@
       "limitations": "공개 공지에는 부품 교체 전에 해당 차량의 ECM 업데이트와 재발 여부를 확인하도록 되어 있습니다. 다른 차종에 같은 조치를 적용하지 않습니다.",
       "sourceId": "nhtsa-kia-eng156-2016",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0140",
@@ -572,7 +838,26 @@
       "limitations": "북미 2008 Rio/Rio5의 ECM 개선 사례이며 센서 교체 지시로 일반화할 수 없습니다.",
       "sourceId": "nhtsa-kia-eng066-2010",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0451",
@@ -602,7 +887,26 @@
       "limitations": "공개 공지의 ECM 업데이트는 지정된 북미 차량에만 적용됩니다.",
       "sourceId": "nhtsa-kia-eng066-2010",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0461",
@@ -632,7 +936,26 @@
       "limitations": "북미 2008 Rio/Rio5의 제어기 개선 사례이며 다른 차종의 부품 원인을 뜻하지 않습니다.",
       "sourceId": "nhtsa-kia-eng066-2010",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0101",
@@ -661,7 +984,26 @@
       "limitations": "공개 공지는 특정 차량의 소프트웨어 사례이며 다른 차종의 원인을 확정하지 않습니다.",
       "sourceId": "nhtsa-fca-18-051-16",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0335",
@@ -690,7 +1032,26 @@
       "limitations": "주행 중 시동 꺼짐이 있으면 운행을 중단하고 전문가 점검을 받으세요.",
       "sourceId": "nhtsa-fca-18-051-16",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0133",
@@ -719,7 +1080,26 @@
       "limitations": "코드만으로 산소센서 교체를 결정할 수 없습니다.",
       "sourceId": "nhtsa-fca-18-051-16",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P2610",
@@ -748,7 +1128,26 @@
       "limitations": "제어기 교체를 뜻하는 코드가 아니며 전원 상태 확인이 먼저입니다.",
       "sourceId": "nhtsa-fca-18-051-16",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "CONTEXT_REQUIRED",
+      "drivingAdvice": "코드만으로 운행 가능 여부를 정할 수 없습니다. 경고등과 차량 증상, 동반 코드를 확인하고 이상이 지속되면 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0011",
@@ -777,7 +1176,26 @@
       "limitations": "공개 공지의 볼트 결함은 대상 차량에 한정되며 다른 차량에 자동 적용되지 않습니다.",
       "sourceId": "nhtsa-gm-a202304840",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0014",
@@ -806,7 +1224,26 @@
       "limitations": "공개 공지의 수리법은 대상 VIN에만 해당합니다.",
       "sourceId": "nhtsa-gm-a202304840",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "SERVICE_SOON",
+      "drivingAdvice": "경고등이 점멸하거나 떨림·출력 저하가 크면 운행을 중단하세요. 경고가 계속 켜지면 무리한 운행을 피하고 조속히 점검을 예약하세요.",
+      "ownerChecks": [
+        "경고등의 점등·점멸 상태 촬영",
+        "시동·공회전·가속 때의 증상 기록",
+        "보닛을 열기 전 냄새·연기·누유 여부 확인"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P2002",
@@ -835,7 +1272,26 @@
       "limitations": "임의 강제 재생은 고온 위험이 있으므로 전문가가 수행해야 합니다.",
       "sourceId": "nhtsa-ford-23m01",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "출력 제한과 DPF 경고 표시 기록",
+        "최근 단거리 운행·재생 이력 기록",
+        "임의 강제 재생을 실행하지 않기"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0741",
@@ -864,7 +1320,26 @@
       "limitations": "공지의 토크컨버터 교체는 대상 VIN 한정이며 다른 변속기에 그대로 적용하지 않습니다.",
       "sourceId": "nhtsa-honda-23-076",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "변속 충격·미끄러짐이 발생한 속도 기록",
+        "주차 위치에서 누유 흔적 육안 확인",
+        "경고등이 점멸하면 운행 중단"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "발생 당시 RPM·부하·냉각수 온도·연료 보정값 중 지원 항목"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0A80",
@@ -893,7 +1368,26 @@
       "limitations": "고전압 배터리 분해·측정은 자격과 보호장비를 갖춘 전문가 작업입니다.",
       "sourceId": "nhtsa-toyota-t-sb-0049-14",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "계기판 경고 문구와 색상 촬영",
+        "READY·충전 가능 여부 기록",
+        "타는 냄새·누수·비정상 발열은 접촉하지 말고 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "SOC·SOH·셀 전압 편차·배터리 온도 및 충전 상태"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0A7F",
@@ -922,7 +1416,26 @@
       "limitations": "배터리 열화율 산정 방식은 제조사와 차량마다 달라 직접 비교할 수 없습니다.",
       "sourceId": "nhtsa-toyota-t-sb-0049-14",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "PROMPT_SERVICE",
+      "drivingAdvice": "출력 제한, 시동 꺼짐, 변속 이상, 충전 불가, 붉은 경고, 냄새나 발열이 있으면 운행을 중단하세요. 증상이 없어도 빠르게 전문 점검을 받으세요.",
+      "ownerChecks": [
+        "계기판 경고 문구와 색상 촬영",
+        "READY·충전 가능 여부 기록",
+        "타는 냄새·누수·비정상 발열은 접촉하지 말고 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "SOC·SOH·셀 전압 편차·배터리 온도 및 충전 상태"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     },
     {
       "code": "P0AA6",
@@ -951,7 +1464,26 @@
       "limitations": "절연 고장은 감전·화재 위험과 관련될 수 있습니다. 고전압 부품을 만지거나 코드를 반복 삭제하지 마세요.",
       "sourceId": "nhtsa-hma-17-01-057-1",
       "verificationGrade": "OEM_DOCUMENT",
-      "codeScope": "COMMON_OBD"
+      "codeScope": "COMMON_OBD",
+      "urgency": "STOP_AND_TOW",
+      "drivingAdvice": "READY와 충전 시도를 중단하고 안전한 장소에서 전문 점검과 견인을 검토하세요. 제조사가 안내한 별도 절차가 있으면 그 조건을 우선합니다.",
+      "ownerChecks": [
+        "계기판 경고 문구와 색상 촬영",
+        "READY·충전 가능 여부 기록",
+        "타는 냄새·누수·비정상 발열은 접촉하지 말고 기록"
+      ],
+      "technicianHandoff": [
+        "차량·연식·동력계와 정확한 코드",
+        "코드를 보낸 ECU와 저장·보류·영구 상태",
+        "프리즈 프레임과 동반 코드",
+        "SOC·SOH·셀 전압 편차·배터리 온도 및 충전 상태"
+      ],
+      "beforeClear": [
+        "전체 코드와 ECU·상태",
+        "프리즈 프레임",
+        "계기판 경고 사진",
+        "발생 시각·주행 조건과 증상"
+      ]
     }
   ]
 }
