@@ -18,6 +18,7 @@ import com.eunho.leafobd.obd.ObdProtocol
  */
 data class AppSettings(
     val vehicleName: String = DEFAULT_VEHICLE,
+    val selectedVehicleProfileId: String? = null,
     val headersOn: Boolean = false,
     val protocol: ObdProtocol = ObdProtocol.AUTO,
     val autoProtocolSweep: Boolean = true,
@@ -40,11 +41,11 @@ data class AppSettings(
     val knownEcuAddresses: List<String> = emptyList(),
     val testMode: Boolean = false,
     val fakeScenario: FakeScenario = FakeScenario.RECURRING,
-    /** 앱 실행 시 새 버전을 확인할지. 끄면 인터넷을 전혀 쓰지 않는다. */
+    /** 앱 버전 확인과 수동 데이터 팩 갱신을 허용할지. 끄면 인터넷을 전혀 쓰지 않는다. */
     val checkForUpdates: Boolean = true
 ) {
     companion object {
-        const val DEFAULT_VEHICLE: String = "Nissan Leaf 2019"
+        const val DEFAULT_VEHICLE: String = "차량 미설정"
     }
 }
 
@@ -61,6 +62,7 @@ class SettingsRepository(context: Context) {
     fun load(): AppSettings = AppSettings(
         vehicleName = prefs.getString(KEY_VEHICLE, AppSettings.DEFAULT_VEHICLE)
             ?.takeIf { it.isNotBlank() } ?: AppSettings.DEFAULT_VEHICLE,
+        selectedVehicleProfileId = prefs.getString(KEY_SELECTED_VEHICLE_PROFILE, null),
         headersOn = prefs.getBoolean(KEY_HEADERS, false),
         protocol = ObdProtocol.ofCode(prefs.getString(KEY_PROTOCOL, null)) ?: ObdProtocol.AUTO,
         autoProtocolSweep = prefs.getBoolean(KEY_PROTOCOL_SWEEP, true),
@@ -84,6 +86,7 @@ class SettingsRepository(context: Context) {
     fun save(settings: AppSettings) {
         prefs.edit()
             .putString(KEY_VEHICLE, settings.vehicleName)
+            .putString(KEY_SELECTED_VEHICLE_PROFILE, settings.selectedVehicleProfileId)
             .putBoolean(KEY_HEADERS, settings.headersOn)
             .putString(KEY_PROTOCOL, settings.protocol.code)
             .putBoolean(KEY_PROTOCOL_SWEEP, settings.autoProtocolSweep)
@@ -102,6 +105,7 @@ class SettingsRepository(context: Context) {
     private companion object {
         const val FILE_NAME = "leafobd_settings"
         const val KEY_VEHICLE = "vehicle_name"
+        const val KEY_SELECTED_VEHICLE_PROFILE = "selected_vehicle_profile"
         const val KEY_HEADERS = "headers_on"
         const val KEY_PROTOCOL = "obd_protocol"
         const val KEY_PROTOCOL_SWEEP = "obd_protocol_sweep"

@@ -54,7 +54,8 @@ data class ClearComparison(
     val after: List<DtcCode>,
     val cleared: List<DtcCode>,
     val remaining: List<DtcCode>,
-    val appeared: List<DtcCode>
+    val appeared: List<DtcCode>,
+    val verificationComplete: Boolean = false
 ) {
     /** 재발했거나 새로 나타난 코드가 있으면 활성 고장 가능성이 있다. */
     val hasRecurrence: Boolean get() = remaining.isNotEmpty() || appeared.isNotEmpty()
@@ -95,6 +96,20 @@ fun defaultDiagnosisSteps(): List<DiagnosisStep> = listOf(
 
 /** 화면 전체 상태. UI는 이 값만 보고 그린다. */
 data class MainUiState(
+    val vehicleProfiles: List<com.eunho.leafobd.data.VehicleProfile> = emptyList(),
+    val batterySnapshot: com.eunho.leafobd.data.BatterySnapshot? = null,
+    val batteryRunning: Boolean = false,
+    val batteryMessage: String = "",
+    val batteryRaw: String = "",
+    val batteryProfile: com.eunho.leafobd.ev.EvProfile = com.eunho.leafobd.ev.EvProfile.LEAF_ZE1,
+    val batteryRecordProfile: com.eunho.leafobd.ev.EvProfile? = null,
+    val batteryRecords: List<com.eunho.leafobd.data.BatteryRecord> = emptyList(),
+    val batteryRecordId: String? = null,
+    val batterySaving: Boolean = false,
+    val batteryHistoryError: String = "",
+    val batteryProgress: Float = 0f,
+    val batteryStage: String = "",
+    val batteryStopRequested: Boolean = false,
     val bluetoothSupported: Boolean = true,
     val permissionGranted: Boolean = false,
     val permissionRequested: Boolean = false,
@@ -173,6 +188,12 @@ data class MainUiState(
     /** 새 버전이 있으면 그 정보. 없거나 확인 전이면 null. */
     val updateAvailable: UpdateInfo? = null,
     val updateChecking: Boolean = false,
+    val knowledgePackVersion: String = "확인 중",
+    val knowledgePackRevision: Int = 0,
+    val knowledgePackSource: String = "앱 내장 데이터",
+    val knowledgePackUpdating: Boolean = false,
+    val unknownCodeQueue: com.eunho.leafobd.log.UnknownCodeQueueResult? = null,
+    val unknownCodeQueueLoading: Boolean = false,
 
     val userMessage: String? = null
 ) {
@@ -181,6 +202,8 @@ data class MainUiState(
     val fakeScenario: FakeScenario get() = settings.fakeScenario
     val headersOn: Boolean get() = settings.headersOn
     val vehicleName: String get() = settings.vehicleName
+    val selectedVehicleProfile: com.eunho.leafobd.data.VehicleProfile?
+        get() = vehicleProfiles.firstOrNull { it.id == settings.selectedVehicleProfileId }
 
     val simulated: Boolean get() = testMode
 

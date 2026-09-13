@@ -90,5 +90,7 @@ class ClearEligibilityTest {
     @Test
     fun `체크리스트는 3개다`() {
         assertEquals(3, ClearConfirmation.CHECKLIST.size)
+        assertTrue(ClearConfirmation.SERVICE_CENTER_NOTICE.contains("주행 제한"))
+        assertTrue(ClearConfirmation.SERVICE_CENTER_NOTICE.contains("후속 점검"))
     }
 }

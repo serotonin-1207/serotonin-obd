@@ -114,6 +114,10 @@ fun ClearDtcScreen(
             Text(ClearConfirmation.SCOPE_NOTICE, style = MaterialTheme.typography.bodyMedium)
         }
 
+        SectionCard("서비스센터 안내로 삭제하는 경우") {
+            Text(ClearConfirmation.SERVICE_CENTER_NOTICE, style = MaterialTheme.typography.bodyMedium)
+        }
+
         SectionCard("삭제하면 함께 사라지는 것") {
             Text(
                 "프리즈 프레임(고장 발생 순간의 데이터 스냅샷)도 함께 지워집니다. " +
@@ -222,6 +226,7 @@ fun ClearDtcScreen(
 
         state.clearComparison?.let { comparison ->
             SectionCard("삭제 결과") {
+                Text(if (comparison.verificationComplete) "재조회 완료 · 수리 완료를 뜻하지 않습니다." else "재조회 불완전 · 코드 소거 여부 확인 불가", color = MaterialTheme.colorScheme.primary)
                 StatusRow("어댑터 수신", if (comparison.accepted) "정상 응답(44)" else "확인 불가")
                 ExpandableRaw(label = "삭제 명령 원시 응답 보기", raw = comparison.response)
             }
@@ -254,7 +259,7 @@ fun ClearDtcScreen(
                         )
                     }
                 }
-            } else {
+            } else if (comparison.verificationComplete) {
                 SectionCard("다음 절차") {
                     Text(
                         "1. 차량 전원을 완전히 끕니다.\n" +

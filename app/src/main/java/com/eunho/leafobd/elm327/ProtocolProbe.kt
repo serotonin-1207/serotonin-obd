@@ -10,10 +10,10 @@ enum class ProbeOutcome(val label: String) {
     RESPONDED("응답함"),
 
     /**
-     * 버스 연결은 되었으나 데이터가 없다(`NO DATA`).
+     * 제한 시간 내 유효한 응답을 확인하지 못했다(`NO DATA`).
      * 프로토콜은 맞을 가능성이 있으나 해당 모드를 지원하지 않는 상태일 수 있다.
      */
-    CONNECTED_NO_DATA("연결됨(데이터 없음)"),
+    CONNECTED_NO_DATA("응답 미확인(데이터 없음)"),
 
     /** 연결 자체가 되지 않았다(`UNABLE TO CONNECT`, 타임아웃 등). */
     FAILED("연결 실패")

@@ -37,8 +37,8 @@ android {
         targetSdk = 36
         // 배포 첫 공개 버전. 업데이트 확인 기능이 이 값을 GitHub 의 최신 값과 비교한다.
         // 새 버전을 낼 때마다 versionCode 를 1씩 올리고 version.json 도 함께 갱신한다.
-        versionCode = 2
-        versionName = "1.1"
+        versionCode = 3
+        versionName = "2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -55,6 +55,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            // QA installs must never replace the user's signed release or its records.
+            applicationIdSuffix = ".qa"
+            versionNameSuffix = "-qa"
+        }
         release {
             // 코드 축소·난독화는 켜지 않는다.
             // 오류 메시지에 클래스 이름을 그대로 보여 주어야 사용자가 상황을 설명할 수 있고,
@@ -78,6 +83,8 @@ android {
         // BuildConfig.VERSION_NAME 을 진단 로그에 기록하기 위해 필요하다.
         buildConfig = true
     }
+    // JVM 단위 테스트도 앱과 같은 공개 지식 데이터 팩을 읽는다.
+    sourceSets.getByName("test").resources.srcDir("src/main/assets")
 }
 
 dependencies {
@@ -96,6 +103,8 @@ dependencies {
 
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
+    // Android 런타임의 org.json과 같은 API로 데이터 팩을 JVM에서 검증한다. APK에는 포함되지 않는다.
+    testImplementation("org.json:json:20250517")
 
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)

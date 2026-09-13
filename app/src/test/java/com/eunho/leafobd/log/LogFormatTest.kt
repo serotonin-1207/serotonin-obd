@@ -14,6 +14,13 @@ import java.time.ZoneId
 import java.time.ZonedDateTime
 
 class LogFormatTest {
+    @Test fun batteryReadDoesNotReportNoDtcs() {
+        val s = session().copy(batteryOnly = true)
+        assertTrue(SessionFormatter.toText(s).contains("오류코드 미조회"))
+        assertFalse(SessionFormatter.toText(s).contains("저장 DTC (Mode 03): 없음"))
+        assertTrue(SessionFormatter.toClipboardSummary(s).contains("오류코드 미조회"))
+        assertTrue(SessionFormatter.toJson(s).contains("\"batteryOnly\": true"))
+    }
 
     private val zone: ZoneId = ZoneId.of("Asia/Seoul")
 
@@ -53,6 +60,7 @@ class LogFormatTest {
             code("P0AA6", DtcStatus.PERMANENT, DtcSource.MODE_0A)
         ),
         clearAttempted = clearAttempted,
+        clearVerificationComplete = clearAttempted,
         clearResponse = if (clearAttempted) "44" else null,
         dtcAfterClear = after,
         appVersion = "1.0",
@@ -132,6 +140,41 @@ class LogFormatTest {
         assertTrue(json.contains("\"P0133\""))
         assertTrue(json.contains("\"clearAttempted\": false"))
         assertFalse(json.contains("00:1D:A5:68:98:8B"))
+    }
+
+    @Test
+    fun `새 JSON은 진단 당시 차량 계열 스냅샷을 저장하고 다시 읽는다`() {
+        val snapshot = DiagnosticVehicleSnapshot(
+            profileId = "00000000-0000-0000-0000-000000000001",
+            coverageId = "kr-hyundai-avante-family",
+            coverageLabel = "대한민국 현대 아반떼 계열",
+            catalogRevision = 3,
+            manufacturer = "현대", model = "아반떼 CN7", modelYear = 2022,
+            powertrain = "가솔린", market = "대한민국", engine = "1.6 MPI", transmission = "6단 자동"
+        )
+        val communication = DiagnosticCommunicationSnapshot(protocolIdentified = true, standardDataObserved = false, udsRespondingEcuCount = 4)
+        val json = SessionFormatter.toJson(session().copy(vehicleSnapshot = snapshot, communicationSnapshot = communication), zone)
+        val restored = SavedCodeHistory.parse(json)
+
+        assertTrue(json.contains("\"reportSchema\": 2"))
+        assertTrue(json.contains("\"coverageId\": \"kr-hyundai-avante-family\""))
+        assertEquals("kr-hyundai-avante-family", restored.coverageId)
+        assertEquals("대한민국 현대 아반떼 계열", restored.coverageLabel)
+        assertEquals(true, restored.protocolIdentified)
+        assertEquals(false, restored.standardDataObserved)
+        assertEquals(4, restored.udsRespondingEcuCount)
+        assertTrue(SessionFormatter.toText(session().copy(vehicleSnapshot = snapshot), zone).contains("차량 계열: 대한민국 현대 아반떼 계열"))
+    }
+
+    @Test
+    fun `스키마 1 기록에 새 차량 객체가 있어도 계열을 추정하지 않는다`() {
+        val snapshot = DiagnosticVehicleSnapshot("id", "kr-kia-k5-family", "대한민국 기아 K5 계열", 3,
+            "기아", "K5 DL3", 2021, "가솔린", "대한민국", "1.6T", "8단 자동")
+        val oldJson = SessionFormatter.toJson(session().copy(vehicleSnapshot = snapshot), zone)
+            .replace("\"reportSchema\": 2", "\"reportSchema\": 1")
+        val restored = SavedCodeHistory.parse(oldJson)
+        assertEquals(null, restored.coverageId)
+        assertEquals(null, restored.coverageLabel)
     }
 
     @Test

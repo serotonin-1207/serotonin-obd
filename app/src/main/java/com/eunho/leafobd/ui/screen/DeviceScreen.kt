@@ -1,6 +1,5 @@
 package com.eunho.leafobd.ui.screen
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -9,10 +8,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -29,8 +27,8 @@ import com.eunho.leafobd.viewmodel.MainUiState
 @Composable
 fun DeviceScreen(
     state: MainUiState,
-    onSelect: (ObdBluetoothDevice) -> Unit,
     onConnect: () -> Unit,
+    onConnectDevice: (ObdBluetoothDevice) -> Unit,
     onDisconnect: () -> Unit,
     onRefresh: () -> Unit,
     onRequestPermission: () -> Unit,
@@ -104,6 +102,7 @@ fun DeviceScreen(
 
             else -> {
                 SectionCard("페어링된 장치") {
+                    Text("연결할 장치의 버튼을 누르면 바로 연결을 시작합니다. 별도의 확인 단계는 없습니다.")
                     if (state.pairedDevices.isEmpty()) {
                         Text(
                             "페어링된 장치가 없습니다.\n" +
@@ -115,7 +114,9 @@ fun DeviceScreen(
                             DeviceRow(
                                 device = device,
                                 selected = state.selectedDevice?.address == device.address,
-                                onClick = { onSelect(device) }
+                                connecting = state.connectionState is BluetoothConnectionState.Connecting,
+                                connected = state.connectionState is BluetoothConnectionState.Connected,
+                                onConnect = { onConnectDevice(device) }
                             )
                         }
                     }
@@ -123,13 +124,6 @@ fun DeviceScreen(
                         Text("목록 새로 고침")
                     }
                 }
-
-                Button(
-                    onClick = onConnect,
-                    enabled = state.selectedDevice != null &&
-                        state.connectionState !is BluetoothConnectionState.Connecting,
-                    modifier = Modifier.fillMaxWidth()
-                ) { Text("연결") }
             }
         }
 
@@ -166,21 +160,12 @@ fun DeviceScreen(
 private fun DeviceRow(
     device: ObdBluetoothDevice,
     selected: Boolean,
-    onClick: () -> Unit
+    connecting: Boolean,
+    connected: Boolean,
+    onConnect: () -> Unit
 ) {
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick),
-        colors = CardDefaults.cardColors(
-            containerColor = if (selected) {
-                MaterialTheme.colorScheme.primaryContainer
-            } else {
-                MaterialTheme.colorScheme.surfaceVariant
-            }
-        )
-    ) {
-        Column(Modifier.padding(12.dp)) {
+    OutlinedCard(modifier = Modifier.fillMaxWidth()) {
+        Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(
                 text = device.name + if (device.looksLikeObdAdapter) "  (OBD 어댑터로 추정)" else "",
                 style = MaterialTheme.typography.bodyLarge,
@@ -191,12 +176,12 @@ private fun DeviceRow(
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
-            if (selected) {
-                Text(
-                    text = "선택됨",
-                    style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.primary
-                )
+            Button(onClick = onConnect, enabled = !connecting && !(selected && connected), modifier = Modifier.fillMaxWidth()) {
+                Text(when {
+                    selected && connecting -> "연결 중…"
+                    selected && connected -> "현재 연결됨"
+                    else -> "이 장치 연결"
+                })
             }
         }
     }

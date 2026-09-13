@@ -1,6 +1,6 @@
 {
-  "versionCode": 2,
-  "versionName": "1.1",
-  "notes": "표준 OBD-II 진단, ECU 직접 조회(UDS), 오류코드 읽기·삭제, 프로토콜 자동 탐색. 첫 공개 버전입니다.",
+  "versionCode": 3,
+  "versionName": "2.0",
+  "notes": "차량 프로필과 차종별 지원 범위, 105개 오류코드 해설, 정비사 보고서, 리프·니로 EV 배터리 그래프, 안전한 코드 삭제와 새 진단 아이콘을 추가했습니다.",
   "downloadUrl": "https://github.com/serotonin-1207/serotonin-obd/releases/latest"
 }

@@ -42,7 +42,7 @@ fun SettingsScreen(
     state: MainUiState,
     onTestModeChange: (Boolean) -> Unit,
     onScenarioChange: (FakeScenario) -> Unit,
-    onVehicleNameChange: (String) -> Unit,
+    onManageVehicles: () -> Unit,
     onProtocolChange: (ObdProtocol) -> Unit,
     onAutoSweepChange: (Boolean) -> Unit,
     onHeadersChange: (Boolean) -> Unit,
@@ -52,14 +52,11 @@ fun SettingsScreen(
     onReadLiveValuesChange: (Boolean) -> Unit,
     onCheckUpdatesChange: (Boolean) -> Unit,
     onCheckUpdateNow: () -> Unit,
+    onUpdateKnowledgePack: () -> Unit,
     onOpenUrl: (String) -> Unit,
     onOpenHelp: () -> Unit,
     onOpenAppSettings: () -> Unit
 ) {
-    var vehicleInput by remember(state.settings.vehicleName) {
-        mutableStateOf(state.settings.vehicleName)
-    }
-
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -70,23 +67,8 @@ fun SettingsScreen(
         if (state.simulated) SimulatedBadge()
 
         SectionCard("진단 대상 차량") {
-            Text(
-                "로그와 화면에 표시할 차량 이름입니다. 다른 차량에 이 앱을 쓸 때 바꾸십시오.",
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            OutlinedTextField(
-                value = vehicleInput,
-                onValueChange = { vehicleInput = it },
-                singleLine = true,
-                label = { Text("차량 이름") },
-                modifier = Modifier.fillMaxWidth()
-            )
-            OutlinedButton(
-                onClick = { onVehicleNameChange(vehicleInput) },
-                enabled = vehicleInput != state.settings.vehicleName,
-                modifier = Modifier.fillMaxWidth()
-            ) { Text("차량 이름 저장") }
+            Text(state.selectedVehicleProfile?.let { "${it.alias}\n${it.description}" } ?: "선택된 차량이 없습니다.")
+            OutlinedButton(onClick = onManageVehicles, modifier = Modifier.fillMaxWidth()) { Text("차량 프로필 관리") }
             Text(
                 "이 앱은 표준 OBD-II 명령만 사용하므로 OBD-II 규격을 따르는 다른 차량에서도 " +
                     "오류코드를 읽을 수 있습니다. 다만 ABS·에어백·TPMS 같은 제조사 전용 계통은 " +
@@ -263,13 +245,13 @@ fun SettingsScreen(
         }
 
         SectionCard("개인정보 및 네트워크") {
-            StatusRow("인터넷 권한", "없음")
+            StatusRow("인터넷 사용", "앱·오류코드 데이터 업데이트만")
             StatusRow("위치 권한", "사용하지 않음")
             StatusRow("광고·분석 SDK", "없음")
             StatusRow("Bluetooth 주소 저장", "마지막 2바이트만")
             Text(
-                "앱은 완전히 오프라인으로 동작합니다. 진단 데이터는 기기 안에만 저장되며, " +
-                    "사용자가 직접 공유 버튼을 눌렀을 때만 밖으로 나갑니다.",
+                "차량 진단과 검색은 오프라인으로 동작합니다. 진단 데이터는 기기 안에만 저장되며, " +
+                    "업데이트 요청에 차량 정보나 진단 기록을 포함하지 않습니다.",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -284,7 +266,7 @@ fun SettingsScreen(
                 onCheckedChange = onCheckUpdatesChange,
                 title = "새 버전 확인",
                 description = "앱을 열 때 새 버전이 있는지 확인해 알려 줍니다. " +
-                    "버전 번호만 읽으며 진단 데이터는 전송하지 않습니다. " +
+                    "오류코드 데이터 갱신은 아래 버튼을 눌렀을 때만 실행됩니다. 진단 데이터는 전송하지 않습니다. " +
                     "끄면 인터넷을 전혀 사용하지 않습니다."
             )
             state.updateAvailable?.let { update ->
@@ -301,6 +283,20 @@ fun SettingsScreen(
             ) {
                 Text(if (state.updateChecking) "확인 중…" else "지금 확인")
             }
+            StatusRow("오류코드 데이터", "${state.knowledgePackVersion} · r${state.knowledgePackRevision}")
+            StatusRow("현재 출처", state.knowledgePackSource)
+            OutlinedButton(
+                onClick = onUpdateKnowledgePack,
+                enabled = state.settings.checkForUpdates && !state.knowledgePackUpdating,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(if (state.knowledgePackUpdating) "데이터 확인 중…" else "오류코드 데이터 업데이트")
+            }
+            Text(
+                "GitHub의 공개 데이터만 내려받습니다. 서명·해시·출처 검사를 모두 통과해야 적용되며 실패하면 현재 데이터를 유지합니다.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
         }
 
         SectionCard("앱 정보") {

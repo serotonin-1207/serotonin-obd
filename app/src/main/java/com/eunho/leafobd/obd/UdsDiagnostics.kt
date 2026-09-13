@@ -24,6 +24,7 @@ data class UdsDiagnosticsResult(
         get() = when {
             errorMessage != null -> errorMessage
             results.isEmpty() -> "조회한 ECU 가 없습니다."
+            results.any { !it.complete } -> "일부 ECU의 응답을 확인하지 못했습니다. 확인된 코드 ${allCodes.size}건 · 전체 정상 여부 확인 불가"
             allCodes.isEmpty() -> "ECU ${results.size}곳을 확인했고 저장된 오류코드가 없습니다."
             else ->
                 "ECU ${results.size}곳 중 ${withCodes.size}곳에서 오류코드 ${allCodes.size}건을 찾았습니다."
@@ -94,7 +95,7 @@ class UdsDiagnostics(private val client: Elm327Client) {
                 }
 
                 // 응답 자체가 없던 주소는 결과에 넣지 않는다.
-                if (parsed.codes.isNotEmpty() || parsed.raw.isNotBlank()) results.add(parsed)
+                results.add(parsed)
 
                 if (readVin && vin == null) {
                     val vinLog = client.send(READ_VIN, READ_TIMEOUT_MS)

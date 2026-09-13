@@ -85,6 +85,10 @@ fun UdsClearScreen(
             }
         }
 
+        SectionCard("서비스센터 안내로 삭제하는 경우") {
+            Text(UdsClearConfirmation.SERVICE_CENTER_NOTICE, style = MaterialTheme.typography.bodyMedium)
+        }
+
         if (state.hasHighVoltageCodes) {
             Card(
                 modifier = Modifier.fillMaxWidth(),

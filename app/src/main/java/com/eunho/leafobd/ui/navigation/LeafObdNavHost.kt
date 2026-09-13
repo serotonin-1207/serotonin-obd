@@ -20,6 +20,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.eunho.leafobd.ui.screen.BusMonitorScreen
+import com.eunho.leafobd.ui.screen.BatteryScreen
+import com.eunho.leafobd.ui.screen.KnowledgeScreen
 import com.eunho.leafobd.ui.screen.ClearDtcScreen
 import com.eunho.leafobd.ui.screen.DidScanScreen
 import com.eunho.leafobd.ui.screen.UdsClearScreen
@@ -31,16 +33,24 @@ import com.eunho.leafobd.ui.screen.HomeScreen
 import com.eunho.leafobd.ui.screen.LogScreen
 import com.eunho.leafobd.ui.screen.SettingsScreen
 import com.eunho.leafobd.ui.screen.UdsDtcScreen
+import com.eunho.leafobd.ui.screen.VehicleProfilesScreen
+import com.eunho.leafobd.ui.screen.VehicleSupportScreen
+import com.eunho.leafobd.ui.screen.UnknownCodeQueueScreen
 import com.eunho.leafobd.viewmodel.MainViewModel
 
 /** 화면 경로. */
 object Routes {
     const val HOME = "home"
+    const val BATTERY = "battery"
+    const val KNOWLEDGE = "knowledge"
+    const val UNKNOWN_CODES = "unknowncodes"
     const val DEVICES = "devices"
     const val DIAGNOSIS = "diagnosis"
     const val CLEAR = "clear"
     const val LOGS = "logs"
     const val SETTINGS = "settings"
+    const val VEHICLES = "vehicles"
+    const val SUPPORT = "support"
     const val HELP = "help"
     const val BUS_MONITOR = "busmonitor"
     const val ECU_SCAN = "ecuscan"
@@ -50,11 +60,16 @@ object Routes {
 }
 
 private fun titleFor(route: String?): String = when (route) {
+    Routes.BATTERY -> "배터리"
+    "knowledge?code={code}", Routes.KNOWLEDGE -> "오류코드 해설"
+    Routes.UNKNOWN_CODES -> "미해설 코드 대기함"
     Routes.DEVICES -> "어댑터 선택"
     Routes.DIAGNOSIS -> "진단"
     Routes.CLEAR -> "오류코드 삭제"
     Routes.LOGS -> "진단 기록"
     Routes.SETTINGS -> "설정"
+    Routes.VEHICLES -> "내 차량"
+    Routes.SUPPORT -> "차량 지원 범위"
     Routes.HELP -> "사용 절차"
     Routes.BUS_MONITOR -> "CAN 버스 확인"
     Routes.ECU_SCAN -> "ECU 응답 스캔"
@@ -119,11 +134,41 @@ fun LeafObdApp(
                     onDismissUpdate = viewModel::dismissUpdate
                 )
             }
+            composable(Routes.BATTERY) { BatteryScreen(uiState, viewModel::setBatterySnapshot, viewModel::readEvBattery,
+                { navController.navigate(Routes.DEVICES) }, viewModel::selectBatteryProfile, viewModel::stopBatteryRead,
+                viewModel::saveBatterySnapshot, viewModel::openBatteryRecord, viewModel::deleteBatteryRecord) }
+            composable(Routes.VEHICLES) {
+                VehicleProfilesScreen(
+                    uiState,
+                    viewModel::saveVehicleProfile,
+                    viewModel::selectVehicleProfile,
+                    viewModel::deleteVehicleProfile,
+                    onOpenSupport = { navController.navigate(Routes.SUPPORT) }
+                )
+            }
+            composable(Routes.SUPPORT) {
+                VehicleSupportScreen(
+                    profile = uiState.selectedVehicleProfile,
+                    onManageVehicles = { navController.navigate(Routes.VEHICLES) },
+                    onOpenUrl = onOpenUrl
+                )
+            }
+            composable("knowledge?code={code}", arguments = listOf(androidx.navigation.navArgument("code") { defaultValue = "" })) { entry ->
+                KnowledgeScreen(onOpenUrl, entry.arguments?.getString("code").orEmpty(), uiState.selectedVehicleProfile)
+            }
+            composable(Routes.UNKNOWN_CODES) {
+                UnknownCodeQueueScreen(
+                    state = uiState,
+                    onRefresh = viewModel::refreshUnknownCodeQueue,
+                    onOpenCode = { navController.navigate("knowledge?code=${android.net.Uri.encode(it)}") },
+                    onMessage = viewModel::showMessage
+                )
+            }
             composable(Routes.DEVICES) {
                 DeviceScreen(
                     state = uiState,
-                    onSelect = viewModel::selectDevice,
                     onConnect = viewModel::connect,
+                    onConnectDevice = viewModel::connectDevice,
                     onDisconnect = viewModel::disconnect,
                     onRefresh = viewModel::refreshPrerequisites,
                     onRequestPermission = onRequestPermission,
@@ -140,7 +185,9 @@ fun LeafObdApp(
                     onGoToClear = { navController.navigate(Routes.CLEAR) },
                     onGoToLogs = { navController.navigate(Routes.LOGS) },
                     onGoToBusMonitor = { navController.navigate(Routes.BUS_MONITOR) },
-                    onGoToEcuScan = { navController.navigate(Routes.ECU_SCAN) }
+                    onGoToEcuScan = { navController.navigate(Routes.ECU_SCAN) },
+                    onManageProfiles = { navController.navigate(Routes.VEHICLES) },
+                    onOpenCode = { navController.navigate("knowledge?code=${android.net.Uri.encode(it)}") }
                 )
             }
             composable(Routes.CLEAR) {
@@ -166,7 +213,7 @@ fun LeafObdApp(
                     state = uiState,
                     onTestModeChange = viewModel::setTestMode,
                     onScenarioChange = viewModel::setFakeScenario,
-                    onVehicleNameChange = viewModel::setVehicleName,
+                    onManageVehicles = { navController.navigate(Routes.VEHICLES) },
                     onProtocolChange = viewModel::setProtocol,
                     onAutoSweepChange = viewModel::setAutoProtocolSweep,
                     onHeadersChange = viewModel::setHeadersOn,
@@ -176,6 +223,7 @@ fun LeafObdApp(
                     onReadLiveValuesChange = viewModel::setReadLiveValues,
                     onCheckUpdatesChange = viewModel::setCheckForUpdates,
                     onCheckUpdateNow = { viewModel.checkForUpdates(silent = false) },
+                    onUpdateKnowledgePack = viewModel::updateKnowledgePack,
                     onOpenUrl = onOpenUrl,
                     onOpenHelp = { navController.navigate(Routes.HELP) },
                     onOpenAppSettings = onOpenAppSettings
@@ -204,6 +252,7 @@ fun LeafObdApp(
                     onGoToScan = { navController.navigate(Routes.ECU_SCAN) },
                     onGoToClear = { navController.navigate(Routes.UDS_CLEAR) },
                     onGoToDidScan = { navController.navigate(Routes.DID_SCAN) },
+                    onOpenCode = { navController.navigate("knowledge?code=${android.net.Uri.encode(it)}") },
                     onMessage = viewModel::showMessage
                 )
             }

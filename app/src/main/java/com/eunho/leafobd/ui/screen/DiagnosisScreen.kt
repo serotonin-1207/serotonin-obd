@@ -49,7 +49,9 @@ fun DiagnosisScreen(
     onGoToClear: () -> Unit,
     onGoToLogs: () -> Unit,
     onGoToBusMonitor: () -> Unit,
-    onGoToEcuScan: () -> Unit
+    onGoToEcuScan: () -> Unit,
+    onManageProfiles: () -> Unit,
+    onOpenCode: (String) -> Unit
 ) {
     val context: Context = LocalContext.current
 
@@ -64,10 +66,14 @@ fun DiagnosisScreen(
 
         Button(
             onClick = onRunDiagnosis,
-            enabled = !state.diagnosisRunning,
+            enabled = !state.diagnosisRunning && state.selectedVehicleProfile != null,
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(if (state.diagnosisRunning) "진단 진행 중…" else "진단 실행")
+        }
+        if (state.selectedVehicleProfile == null) {
+            Text("진단 기록이 다른 차량에 섞이지 않도록 먼저 차량을 선택하세요.")
+            OutlinedButton(onClick = onManageProfiles, modifier = Modifier.fillMaxWidth()) { Text("진단 차량 선택") }
         }
 
         if (state.diagnosisRunning) {
@@ -136,7 +142,7 @@ fun DiagnosisScreen(
 
         state.freezeFrame?.let { frame -> FreezeFrameCard(frame) }
 
-        state.modeResults.forEach { result -> ModeResultCard(result) }
+        state.modeResults.forEach { result -> ModeResultCard(result, onOpenCode) }
 
         if (state.modeResults.isNotEmpty()) {
             SectionCard("로그") {
@@ -254,7 +260,7 @@ private fun FreezeFrameCard(frame: FreezeFrame) {
 }
 
 @Composable
-private fun ModeResultCard(result: ModeResult) {
+private fun ModeResultCard(result: ModeResult, onOpenCode: (String) -> Unit) {
     SectionCard("${result.mode.label} — ${result.mode.command}") {
         StatusRow("응답 상태", result.statusLabel)
         result.message?.let {
@@ -263,14 +269,14 @@ private fun ModeResultCard(result: ModeResult) {
         if (result.codes.isEmpty()) {
             Text("검출된 코드가 없습니다.", style = MaterialTheme.typography.bodyMedium)
         } else {
-            result.codes.forEach { DtcRow(it) }
+            result.codes.forEach { DtcRow(it, onOpenCode = onOpenCode) }
         }
         ExpandableRaw(raw = result.raw)
     }
 }
 
 @Composable
-fun DtcRow(code: DtcCode, highlight: Boolean = false) {
+fun DtcRow(code: DtcCode, highlight: Boolean = false, onOpenCode: ((String) -> Unit)? = null) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
@@ -301,6 +307,9 @@ fun DtcRow(code: DtcCode, highlight: Boolean = false) {
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
+            onOpenCode?.let { open ->
+                OutlinedButton(onClick = { open(code.code) }) { Text("${code.code} 해설·확인 순서") }
+            }
             code.description?.let {
                 Text(it, style = MaterialTheme.typography.bodySmall)
             }

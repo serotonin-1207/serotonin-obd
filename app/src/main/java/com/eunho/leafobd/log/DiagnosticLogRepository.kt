@@ -26,7 +26,7 @@ data class SavedSession(
  * 저장 위치: `context.filesDir/logs/`
  * - 앱 전용 영역이므로 다른 앱이 읽을 수 없다.
  * - 외부로 나가는 유일한 경로는 사용자가 직접 누르는 공유 버튼뿐이다.
- * - 인터넷 권한이 없으므로 자동 전송은 구조적으로 불가능하다.
+ * - 저장소는 네트워크 코드와 분리되어 있으며 로그를 자동 전송하지 않는다.
  */
 class DiagnosticLogRepository(private val context: Context) {
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
+    <cache-path name="workshop_reports" path="workshop-reports/" />
     <!-- 앱 내부 저장소의 진단 로그 폴더만 공유 대상으로 노출한다. -->
     <files-path
         name="leafobd_logs"

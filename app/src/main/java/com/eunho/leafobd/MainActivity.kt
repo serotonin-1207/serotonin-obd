@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import com.eunho.leafobd.bluetooth.BluetoothPermissions
+import com.eunho.leafobd.data.DiagnosticKnowledge
 import com.eunho.leafobd.ui.navigation.LeafObdApp
 import com.eunho.leafobd.ui.theme.LeafOBDTheme
 import com.eunho.leafobd.viewmodel.MainViewModel
@@ -38,6 +39,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val knowledgeLoaded = DiagnosticKnowledge.installBundled(this)
         enableEdgeToEdge()
         setContent {
             LeafOBDTheme {
@@ -50,6 +52,7 @@ class MainActivity : ComponentActivity() {
                 )
             }
         }
+        if (!knowledgeLoaded) viewModel.showMessage("내장 코드 해설 데이터 검증에 실패했습니다. 진단 원시 기록은 계속 사용할 수 있습니다.")
     }
 
     override fun onResume() {

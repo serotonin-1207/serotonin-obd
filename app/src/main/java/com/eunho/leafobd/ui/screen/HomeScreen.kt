@@ -1,185 +1,78 @@
 package com.eunho.leafobd.ui.screen
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.foundation.layout.Row
-import androidx.compose.material3.Button
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.eunho.leafobd.bluetooth.label
 import com.eunho.leafobd.ui.component.SafetyWarningCard
 import com.eunho.leafobd.ui.component.SectionCard
 import com.eunho.leafobd.ui.component.SimulatedBadge
-import com.eunho.leafobd.ui.component.StatusRow
 import com.eunho.leafobd.ui.navigation.Routes
-import com.eunho.leafobd.ui.theme.StatusFail
-import com.eunho.leafobd.ui.theme.StatusOk
 import com.eunho.leafobd.viewmodel.MainUiState
 
 @Composable
-fun HomeScreen(
-    state: MainUiState,
-    onNavigate: (String) -> Unit,
-    onRefresh: () -> Unit,
-    onRequestPermission: () -> Unit,
-    onOpenBluetoothSettings: () -> Unit,
-    onOpenUrl: (String) -> Unit = {},
-    onDismissUpdate: () -> Unit = {}
-) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState())
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
+fun HomeScreen(state: MainUiState, onNavigate: (String) -> Unit, onRefresh: () -> Unit,
+    onRequestPermission: () -> Unit, onOpenBluetoothSettings: () -> Unit,
+    onOpenUrl: (String) -> Unit = {}, onDismissUpdate: () -> Unit = {}) {
+    var professional by rememberSaveable { mutableStateOf(false) }
+    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
         if (state.simulated) SimulatedBadge()
-
-        // 새 버전 안내. 다운로드는 사용자가 직접 눌러 브라우저로 넘어간다.
-        state.updateAvailable?.let { update ->
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.tertiaryContainer
-                )
-            ) {
-                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text(
-                        "새 버전이 있습니다 — ${update.versionName}",
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onTertiaryContainer
-                    )
-                    if (update.notes.isNotBlank()) {
-                        Text(
-                            update.notes,
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onTertiaryContainer
-                        )
-                    }
-                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Button(onClick = { onOpenUrl(update.downloadUrl) }) {
-                            Text("다운로드")
-                        }
-                        OutlinedButton(onClick = onDismissUpdate) {
-                            Text("나중에")
-                        }
-                    }
-                }
+        Text("내 차를 이해하는 진단", style = MaterialTheme.typography.headlineMedium)
+        Text("코드의 의미를 찾고, 측정값을 확인하고, 정비 기록으로 이어갑니다.", style = MaterialTheme.typography.bodyLarge)
+        FilterChip(selected = professional, onClick = { professional = !professional }, label = { Text(if (professional) "정비사 보기" else "일반 사용자 보기 · 눌러서 전환") })
+        state.updateAvailable?.let { update -> SectionCard("새 버전 ${update.versionName}") {
+            Text(update.notes)
+            TextButton(onClick = { onOpenUrl(update.downloadUrl) }) { Text("다운로드") }
+            TextButton(onClick = onDismissUpdate) { Text("나중에") }
+        } }
+        SectionCard(state.vehicleName) {
+            Text(state.selectedVehicleProfile?.description ?: "진단 전에 차량 프로필을 선택하세요.")
+            Text(state.connectionState.label)
+            Text("장치: ${state.selectedDevice?.name ?: "선택 전"}")
+            Text("최근 진단: ${state.lastDiagnosisAt ?: "아직 없음"}")
+            Button(onClick = { onNavigate(Routes.DEVICES) }, modifier = Modifier.fillMaxWidth()) { Text("어댑터 연결·변경") }
+            Button(onClick = { onNavigate(Routes.VEHICLES) }, modifier = Modifier.fillMaxWidth()) { Text(if (state.selectedVehicleProfile == null) "진단 차량 선택" else "진단 차량 변경") }
+            TextButton(onClick = { onNavigate(Routes.SETTINGS) }) { Text("진단 설정") }
+        }
+        HomeAction("01", "오류코드 알아보기", "연결 없이 검색 · 공개 근거와 적용 범위", { onNavigate(Routes.KNOWLEDGE) })
+        HomeAction("02", "차량 진단", "저장·보류·영구 코드와 발생 당시 기록", { onNavigate(Routes.DIAGNOSIS) })
+        HomeAction("03", "배터리 그래픽", "니로·리프 읽기 시험 · 측정 파일의 셀 전압·온도", { onNavigate(Routes.BATTERY) })
+        HomeAction("04", "진단 기록", "정비 전후 기록 확인·공유", { onNavigate(Routes.LOGS) })
+        HomeAction("05", "미해설 코드 대기함", "차량별 실제 기록에서 검증할 코드 정리", { onNavigate(Routes.UNKNOWN_CODES) })
+        HomeAction("06", "내 차 지원 범위", "기능별 지원·부분 지원·실차 검증 상태", { onNavigate(Routes.SUPPORT) })
+        SectionCard("지원 범위를 먼저 확인하세요") {
+            Text("표준 OBD 기능도 차량마다 지원 항목이 다릅니다. 현대·기아 국내 차량과 전기차 배터리 직접 조회는 차종별 실차 검증이 필요합니다.")
+            Text("응답 없음 ≠ 고장 없음 · 삭제 ≠ 수리", color = MaterialTheme.colorScheme.primary)
+        }
+        if (professional) SectionCard("정비사 도구") {
+            Text("제조사별 명령과 응답은 적용 차량을 확인한 뒤 사용하세요.")
+            listOf("ECU 오류코드 읽기" to Routes.UDS_DTC, "ECU 응답 스캔" to Routes.ECU_SCAN,
+                "ECU 데이터 스캔" to Routes.DID_SCAN, "CAN 버스 확인" to Routes.BUS_MONITOR,
+                "표준 코드 삭제" to Routes.CLEAR, "ECU 코드 삭제" to Routes.UDS_CLEAR).forEach { (title, route) ->
+                OutlinedButton(onClick = { onNavigate(route) }, modifier = Modifier.fillMaxWidth()) { Text(title) }
             }
         }
-
-        SectionCard("차량 및 어댑터") {
-            StatusRow("차량", state.vehicleName)
-            StatusRow("어댑터", "Vgate iCar Pro BT3.0")
-            StatusRow("선택된 장치", state.selectedDevice?.name ?: "선택 안 됨")
-            if (state.headersOn) StatusRow("CAN 헤더 표시", "켬 (ATH1)")
-        }
-
-        SectionCard("현재 상태") {
-            StatusRow(
-                "Bluetooth 지원",
-                if (state.bluetoothSupported) "지원" else "미지원",
-                valueColor = if (state.bluetoothSupported) StatusOk else StatusFail
-            )
-            StatusRow(
-                "Bluetooth 권한",
-                if (state.permissionGranted) "허용됨" else "필요함",
-                valueColor = if (state.permissionGranted) StatusOk else StatusFail
-            )
-            StatusRow(
-                "Bluetooth 전원",
-                if (state.bluetoothEnabled) "켜짐" else "꺼짐",
-                valueColor = if (state.bluetoothEnabled) StatusOk else StatusFail
-            )
-            StatusRow("어댑터 연결", state.connectionState.label)
-            StatusRow(
-                "ELM327 초기화",
-                if (state.elmInitialized) "완료" else "미완료",
-                valueColor = if (state.elmInitialized) StatusOk else MaterialTheme.colorScheme.onSurface
-            )
-            StatusRow("어댑터 정보", state.adapterInfo ?: "-")
-            StatusRow("어댑터 전압", state.adapterVoltage ?: "-")
-            StatusRow("최근 진단", state.lastDiagnosisAt ?: "없음")
-
-            if (!state.permissionGranted) {
-                Button(onClick = onRequestPermission, modifier = Modifier.fillMaxWidth()) {
-                    Text("Bluetooth 권한 허용하기")
-                }
-            }
-            if (state.permissionGranted && !state.bluetoothEnabled) {
-                OutlinedButton(onClick = onOpenBluetoothSettings, modifier = Modifier.fillMaxWidth()) {
-                    Text("Bluetooth 설정 열기")
-                }
-            }
-            OutlinedButton(onClick = onRefresh, modifier = Modifier.fillMaxWidth()) {
-                Text("상태 새로 고침")
-            }
-        }
-
+        if (!state.permissionGranted) Button(onClick = onRequestPermission, modifier = Modifier.fillMaxWidth()) { Text("Bluetooth 권한 허용") }
+        if (state.permissionGranted && !state.bluetoothEnabled) OutlinedButton(onClick = onOpenBluetoothSettings, modifier = Modifier.fillMaxWidth()) { Text("Bluetooth 켜기") }
+        TextButton(onClick = onRefresh) { Text("연결 상태 새로 고침") }
         SafetyWarningCard()
+        OutlinedButton(onClick = { onNavigate(Routes.HELP) }, modifier = Modifier.fillMaxWidth()) { Text("사용 절차") }
+        Text("검색과 기록은 기기 안에서 처리합니다. 업데이트 확인과 사용자가 연 외부 문서에는 인터넷이 필요합니다.", style = MaterialTheme.typography.bodySmall)
+    }
+}
 
-        Button(
-            onClick = { onNavigate(Routes.DEVICES) },
-            modifier = Modifier.fillMaxWidth()
-        ) { Text("어댑터 연결") }
-
-        Button(
-            onClick = { onNavigate(Routes.DIAGNOSIS) },
-            modifier = Modifier.fillMaxWidth()
-        ) { Text("진단 시작") }
-
-        OutlinedButton(
-            onClick = { onNavigate(Routes.LOGS) },
-            modifier = Modifier.fillMaxWidth()
-        ) { Text("진단 기록") }
-
-        OutlinedButton(
-            onClick = { onNavigate(Routes.ECU_SCAN) },
-            modifier = Modifier.fillMaxWidth()
-        ) { Text("ECU 응답 스캔 (읽기 전용)") }
-
-        OutlinedButton(
-            onClick = { onNavigate(Routes.UDS_DTC) },
-            modifier = Modifier.fillMaxWidth()
-        ) { Text("ECU 오류코드 읽기") }
-
-        OutlinedButton(
-            onClick = { onNavigate(Routes.UDS_CLEAR) },
-            modifier = Modifier.fillMaxWidth()
-        ) { Text("ECU 오류코드 삭제") }
-
-        OutlinedButton(
-            onClick = { onNavigate(Routes.BUS_MONITOR) },
-            modifier = Modifier.fillMaxWidth()
-        ) { Text("CAN 버스 확인 (읽기 전용)") }
-
-        OutlinedButton(
-            onClick = { onNavigate(Routes.HELP) },
-            modifier = Modifier.fillMaxWidth()
-        ) { Text("사용 절차 보기") }
-
-        OutlinedButton(
-            onClick = { onNavigate(Routes.SETTINGS) },
-            modifier = Modifier.fillMaxWidth()
-        ) { Text("설정") }
-
-        Text(
-            text = "이 앱은 인터넷을 사용하지 않으며, 진단 데이터를 외부로 전송하지 않습니다.",
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
+@Composable
+private fun HomeAction(number: String, title: String, description: String, onClick: () -> Unit) {
+    Card(onClick = onClick, modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainer)) {
+        Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            Text(number, color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.labelLarge)
+            Text(title, style = MaterialTheme.typography.titleLarge)
+            Text(description, style = MaterialTheme.typography.bodyMedium)
+        }
     }
 }

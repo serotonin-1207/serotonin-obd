@@ -75,6 +75,7 @@ data class UdsDtcReadResult(
     val message: String? = null
 ) {
     val hasCodes: Boolean get() = codes.isNotEmpty()
+    val complete: Boolean get() = statusAvailabilityMask != null && !needsRetry
 
     /** 다시 읽어야 하는 상태인지. */
     val needsRetry: Boolean get() = truncated || frameGap

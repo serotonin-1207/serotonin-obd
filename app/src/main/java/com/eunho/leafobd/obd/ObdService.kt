@@ -235,8 +235,7 @@ class ObdService(
 
         val dataLines = ResponseText.dataLines(log.rawResponse, ObdClear.COMMAND)
         val responses = ObdFrameParser.parse(dataLines, headersOn)
-        val accepted = responses.any { it.bytes.contains(ObdClear.RESPONSE_PREFIX) } ||
-            dataLines.any { it.equals("OK", ignoreCase = true) }
+        val accepted = log.success && responses.any { it.bytes.firstOrNull() == ObdClear.RESPONSE_PREFIX }
 
         val message = when {
             !log.success -> log.errorMessage ?: "삭제 명령이 실패했습니다."

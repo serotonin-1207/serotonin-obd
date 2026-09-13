@@ -47,7 +47,8 @@ fun UdsDtcScreen(
     onGoToScan: () -> Unit,
     onGoToClear: () -> Unit,
     onGoToDidScan: () -> Unit,
-    onMessage: (String) -> Unit
+    onMessage: (String) -> Unit,
+    onOpenCode: (String) -> Unit
 ) {
     val context = LocalContext.current
     val addresses = state.ecuScan?.respondingAddresses?.takeIf { it.isNotEmpty() }
@@ -127,7 +128,7 @@ fun UdsDtcScreen(
             ) {
                 Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Text(
-                        if (result.allCodes.isEmpty()) "오류코드 없음" else "오류코드 ${result.allCodes.size}건",
+                        if (result.allCodes.isEmpty()) "조회 결과 확인" else "오류코드 ${result.allCodes.size}건",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold
                     )
@@ -144,15 +145,15 @@ fun UdsDtcScreen(
                         style = MaterialTheme.typography.bodyMedium,
                         color = StatusFail
                     )
-                    result.activeCodes.forEach { UdsCodeRow(it, highlight = true) }
+                    result.activeCodes.forEach { UdsCodeRow(it, onOpenCode, highlight = true) }
                 }
             }
 
-            result.withCodes.forEach { ecuResult -> EcuResultCard(ecuResult) }
+            result.withCodes.forEach { ecuResult -> EcuResultCard(ecuResult, onOpenCode) }
 
             if (result.results.isNotEmpty()) {
                 SectionCard("코드가 없는 ECU") {
-                    val clean = result.results.filterNot { it.hasCodes }
+                    val clean = result.results.filter { !it.hasCodes && it.complete }
                     if (clean.isEmpty()) {
                         Text("없음", style = MaterialTheme.typography.bodyMedium)
                     } else {
@@ -198,7 +199,7 @@ fun UdsDtcScreen(
 }
 
 @Composable
-private fun EcuResultCard(result: UdsDtcReadResult) {
+private fun EcuResultCard(result: UdsDtcReadResult, onOpenCode: (String) -> Unit) {
     SectionCard("ECU ${result.ecu}") {
         StatusRow("코드", "${result.codes.size}건")
         result.message?.let {
@@ -208,13 +209,13 @@ private fun EcuResultCard(result: UdsDtcReadResult) {
                 color = if (result.truncated) StatusWarn else MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
-        result.codes.forEach { UdsCodeRow(it) }
+        result.codes.forEach { UdsCodeRow(it, onOpenCode) }
         ExpandableRaw(raw = result.raw)
     }
 }
 
 @Composable
-private fun UdsCodeRow(code: UdsDtcCode, highlight: Boolean = false) {
+private fun UdsCodeRow(code: UdsDtcCode, onOpenCode: (String) -> Unit, highlight: Boolean = false) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
@@ -240,6 +241,7 @@ private fun UdsCodeRow(code: UdsDtcCode, highlight: Boolean = false) {
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
+            OutlinedButton(onClick = { onOpenCode(code.fullCode) }) { Text("${code.fullCode} 해설·확인 순서") }
             if (code.statusLabels.isNotEmpty()) {
                 Text(
                     code.statusLabels.joinToString(" · "),
@@ -269,7 +271,7 @@ private fun buildReport(results: List<UdsDtcReadResult>, vin: String?): String =
         }
         appendLine()
     }
-    val clean = results.filterNot { it.hasCodes }.map { it.ecu }
+    val clean = results.filter { !it.hasCodes && it.complete }.map { it.ecu }
     if (clean.isNotEmpty()) {
         appendLine("코드 없음: ${clean.joinToString(", ")}")
     }

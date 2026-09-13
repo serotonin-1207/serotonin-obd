@@ -68,6 +68,8 @@ class UdsClearTest {
     fun `경고 문구가 삭제와 수리를 구분한다`() {
         assertTrue(UdsClearConfirmation.WARNING.contains("삭제는 수리가 아닙니다"))
         assertTrue(UdsClearConfirmation.WARNING.contains("고장 감지 기능을 끄는 것이 아닙니다"))
+        assertTrue(UdsClearConfirmation.SERVICE_CENTER_NOTICE.contains("서비스센터"))
+        assertTrue(UdsClearConfirmation.SERVICE_CENTER_NOTICE.contains("다시 읽어"))
         assertEquals(4, UdsClearConfirmation.CHECKLIST.size)
     }
 
@@ -78,7 +80,7 @@ class UdsClearTest {
 
     @Test
     fun `삭제 후 남은 코드를 재발로 분류한다`() {
-        val result = UdsClearResult(
+        val result = UdsClearResult(verificationComplete = true,
             before = listOf(code("P3180"), code("P317E")),
             after = listOf(code("P3180"))
         )
@@ -95,7 +97,7 @@ class UdsClearTest {
     fun `코드가 남아도 현재 고장이 아니면 구분한다`() {
         // 삭제 후 상태가 0x0A 로 바뀌면 현재 고장 비트가 꺼진 것이다.
         val after = UdsDtcCode("P3180", 0x97, 0x0A, "31 80 97 0A", "79A")
-        val result = UdsClearResult(before = listOf(code("P3180")), after = listOf(after))
+        val result = UdsClearResult(verificationComplete = true, before = listOf(code("P3180")), after = listOf(after))
 
         assertTrue(result.remaining.isNotEmpty())
         assertTrue(result.stillFailing.isEmpty())
@@ -108,7 +110,7 @@ class UdsClearTest {
     fun `상태 비트 변화를 잡아낸다`() {
         // 2026-08-04 실차: 삭제 후 P3180 이 0B -> 0A 로 바뀌었다.
         val after = UdsDtcCode("P3180", 0x97, 0x0A, "31 80 97 0A", "79A")
-        val result = UdsClearResult(before = listOf(code("P3180")), after = listOf(after))
+        val result = UdsClearResult(verificationComplete = true, before = listOf(code("P3180")), after = listOf(after))
 
         assertEquals(1, result.statusChanged.size)
         val (changed, was, now) = result.statusChanged[0]
@@ -119,7 +121,7 @@ class UdsClearTest {
 
     @Test
     fun `모두 사라지면 재발이 아니다`() {
-        val result = UdsClearResult(
+        val result = UdsClearResult(verificationComplete = true,
             before = listOf(code("P3180")),
             after = emptyList()
         )
@@ -132,7 +134,7 @@ class UdsClearTest {
 
     @Test
     fun `새로 나타난 코드를 구분한다`() {
-        val result = UdsClearResult(
+        val result = UdsClearResult(verificationComplete = true,
             before = listOf(code("P3180")),
             after = listOf(code("P33ED", ecu = "7BB"))
         )

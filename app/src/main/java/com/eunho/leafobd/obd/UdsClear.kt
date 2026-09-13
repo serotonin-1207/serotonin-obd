@@ -22,7 +22,8 @@ data class UdsClearResult(
     val before: List<UdsDtcCode> = emptyList(),
     val after: List<UdsDtcCode> = emptyList(),
     val durationMs: Long = 0,
-    val errorMessage: String? = null
+    val errorMessage: String? = null,
+    val verificationComplete: Boolean = false
 ) {
     /** 삭제 명령을 받아들인 ECU 수. */
     val acceptedCount: Int get() = outcomes.count { it.accepted }
@@ -30,22 +31,23 @@ data class UdsClearResult(
     /** 사라진 코드. */
     val cleared: List<UdsDtcCode>
         get() {
-            val afterCodes = after.map { it.fullCode }.toSet()
-            return before.filterNot { it.fullCode in afterCodes }
+            if (!verificationComplete) return emptyList()
+            val afterCodes = after.map { it.ecu to it.fullCode }.toSet()
+            return before.filterNot { (it.ecu to it.fullCode) in afterCodes }
         }
 
     /** 삭제 후에도 남은 코드. 활성 고장일 가능성이 크다. */
     val remaining: List<UdsDtcCode>
         get() {
-            val beforeCodes = before.map { it.fullCode }.toSet()
-            return after.filter { it.fullCode in beforeCodes }
+            val beforeCodes = before.map { it.ecu to it.fullCode }.toSet()
+            return after.filter { (it.ecu to it.fullCode) in beforeCodes }
         }
 
     /** 삭제 후 새로 나타난 코드. */
     val appeared: List<UdsDtcCode>
         get() {
-            val beforeCodes = before.map { it.fullCode }.toSet()
-            return after.filterNot { it.fullCode in beforeCodes }
+            val beforeCodes = before.map { it.ecu to it.fullCode }.toSet()
+            return after.filterNot { (it.ecu to it.fullCode) in beforeCodes }
         }
 
     val hasRecurrence: Boolean get() = remaining.isNotEmpty() || appeared.isNotEmpty()
@@ -58,9 +60,9 @@ data class UdsClearResult(
      */
     val statusChanged: List<Triple<UdsDtcCode, Int, Int>>
         get() {
-            val beforeByCode = before.associateBy { it.fullCode }
+            val beforeByCode = before.associateBy { it.ecu to it.fullCode }
             return after.mapNotNull { now ->
-                val was = beforeByCode[now.fullCode] ?: return@mapNotNull null
+                val was = beforeByCode[now.ecu to now.fullCode] ?: return@mapNotNull null
                 if (was.statusByte == now.statusByte) null
                 else Triple(now, was.statusByte, now.statusByte)
             }
@@ -72,6 +74,7 @@ data class UdsClearResult(
     val summary: String
         get() = when {
             errorMessage != null -> errorMessage
+            !verificationComplete -> "삭제 후 재조회가 완전하지 않습니다. 코드 소거 여부는 확인 불가입니다. 확인된 코드 ${after.size}건."
             after.isEmpty() && before.isNotEmpty() ->
                 "코드 ${before.size}건이 모두 사라졌습니다. " +
                     "다만 고장 원인이 남아 있으면 주행·충전 중 다시 나타납니다."

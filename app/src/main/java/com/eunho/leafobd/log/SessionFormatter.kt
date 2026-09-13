@@ -44,6 +44,17 @@ object SessionFormatter {
             sb.appendLine()
         }
         sb.appendLine("차량: ${session.vehicle}")
+        session.vehicleSnapshot?.let { snapshot ->
+            sb.appendLine("차량 사양: ${snapshot.description}")
+            sb.appendLine("차량 계열: ${snapshot.coverageLabel} (${snapshot.coverageId}, 카탈로그 r${snapshot.catalogRevision})")
+            sb.appendLine("엔진·배터리 사양: ${snapshot.engine.ifBlank { "-" }}")
+            sb.appendLine("변속기: ${snapshot.transmission.ifBlank { "-" }}")
+        }
+        session.communicationSnapshot?.let { communication ->
+            sb.appendLine("프로토콜 식별: ${if (communication.protocolIdentified) "관찰됨" else "관찰 안 됨"}")
+            sb.appendLine("표준 OBD 데이터: ${if (communication.standardDataObserved) "관찰됨" else "관찰 안 됨"}")
+            sb.appendLine("제조사 ECU 응답 수: ${communication.udsRespondingEcuCount?.toString() ?: "미측정"}")
+        }
         sb.appendLine("차대번호(마스킹): ${session.vin ?: "-"}")
         sb.appendLine("진단 시각: ${formatInstant(session.startedAt, zone)}")
         sb.appendLine("Android 버전: ${session.androidVersion ?: "-"}")
@@ -123,17 +134,22 @@ object SessionFormatter {
                 sb.appendLine()
             }
 
-            val clean = session.udsResults.filterNot { it.hasCodes }.map { it.ecu }
+            val clean = session.udsResults.filter { !it.hasCodes && it.complete }.map { it.ecu }
             if (clean.isNotEmpty()) {
                 sb.appendLine("코드 없음: ${clean.joinToString(", ")}")
                 sb.appendLine()
             }
         }
 
-        appendCodes(sb, "저장 DTC (Mode 03)", session.dtcBeforeClear.filter { it.source.command == "03" })
-        appendCodes(sb, "보류 DTC (Mode 07)", session.dtcBeforeClear.filter { it.source.command == "07" })
-        appendCodes(sb, "영구 DTC (Mode 0A)", session.dtcBeforeClear.filter { it.source.command == "0A" })
+        if (session.batteryOnly) {
+            sb.appendLine("배터리 읽기 시험 기록 · 오류코드 미조회 · 정상 여부 판단 불가")
+        } else {
+            appendCodes(sb, "저장 DTC (Mode 03)", session.dtcBeforeClear.filter { it.source.command == "03" })
+            appendCodes(sb, "보류 DTC (Mode 07)", session.dtcBeforeClear.filter { it.source.command == "07" })
+            appendCodes(sb, "영구 DTC (Mode 0A)", session.dtcBeforeClear.filter { it.source.command == "0A" })
+        }
 
+        sb.appendLine("삭제 후 재조회: ${if (session.clearVerificationComplete) "완료" else "확인 불가 또는 미실행"}")
         sb.appendLine("삭제 시도 여부: ${if (session.clearAttempted) "예" else "아니오"}")
         if (session.clearAttempted) {
             sb.appendLine("삭제 응답: ${session.clearResponse?.trim() ?: "-"}")
@@ -188,6 +204,8 @@ object SessionFormatter {
     // ------------------------------------------------------------------
 
     fun toJson(session: DiagnosticSession, zone: ZoneId = ZoneId.systemDefault()): String {
+        fun udsCodeJson(code: com.eunho.leafobd.obd.UdsDtcCode): String = Json.obj(
+            "code" to Json.str(code.fullCode), "ecu" to Json.str(code.ecu), "status" to Json.num(code.statusByte))
         fun codeJson(code: DtcCode): String = Json.obj(
             "code" to Json.str(code.code),
             "status" to Json.str(code.status.name),
@@ -220,12 +238,43 @@ object SessionFormatter {
         )
 
         return Json.obj(
+            "reportSchema" to Json.num(2),
+            "udsClearAttempted" to Json.bool(session.udsClearAttempted),
+            "udsReportCodes" to Json.array(session.udsResults.flatMap { it.codes }.map(::udsCodeJson)),
+            "udsReportComplete" to Json.bool(session.udsResults.isNotEmpty() && session.udsResults.all { it.complete }),
+            "udsComparison" to (session.udsClearResult?.let { result -> Json.obj(
+                "verificationComplete" to Json.bool(result.verificationComplete),
+                "before" to Json.array(result.before.map(::udsCodeJson)),
+                "after" to Json.array(result.after.map(::udsCodeJson))
+            ) } ?: "null"),
             "app" to Json.str(APP_NAME),
             "appVersion" to Json.str(session.appVersion),
             "androidVersion" to Json.str(session.androidVersion),
             "vehicle" to Json.str(session.vehicle),
+            "vehicleProfile" to (session.vehicleSnapshot?.let { snapshot -> Json.obj(
+                "profileId" to Json.str(snapshot.profileId),
+                "coverageId" to Json.str(snapshot.coverageId),
+                "coverageLabel" to Json.str(snapshot.coverageLabel),
+                "catalogRevision" to Json.num(snapshot.catalogRevision),
+                "manufacturer" to Json.str(snapshot.manufacturer),
+                "model" to Json.str(snapshot.model),
+                "modelYear" to Json.num(snapshot.modelYear),
+                "powertrain" to Json.str(snapshot.powertrain),
+                "market" to Json.str(snapshot.market),
+                "engine" to Json.str(snapshot.engine),
+                "transmission" to Json.str(snapshot.transmission),
+                indent = "  "
+            ) } ?: "null"),
+            "communication" to (session.communicationSnapshot?.let { communication -> Json.obj(
+                "protocolIdentified" to Json.bool(communication.protocolIdentified),
+                "standardDataObserved" to Json.bool(communication.standardDataObserved),
+                "udsRespondingEcuCount" to Json.num(communication.udsRespondingEcuCount),
+                indent = "  "
+            ) } ?: "null"),
             "vinMasked" to Json.str(session.vin),
+            "clearVerificationComplete" to Json.bool(session.clearVerificationComplete),
             "simulated" to Json.bool(session.simulated),
+            "batteryOnly" to Json.bool(session.batteryOnly),
             "headersOn" to Json.bool(session.headersOn),
             "sessionId" to Json.str(session.id),
             "startedAt" to Json.str(formatInstant(session.startedAt, zone)),
@@ -283,6 +332,10 @@ object SessionFormatter {
             appendLine()
             if (session.simulated) appendLine("(모의 데이터 — 실제 차량 결과 아님)")
             appendLine("차량: ${session.vehicle}")
+            session.vehicleSnapshot?.let { snapshot ->
+                appendLine("차량 사양: ${snapshot.description}")
+                appendLine("차량 계열: ${snapshot.coverageLabel}")
+            }
             appendLine("차대번호(마스킹): ${session.vin ?: "-"}")
             appendLine("진단 시각: ${formatInstant(session.startedAt, zone)}")
             appendLine("Android 버전: ${session.androidVersion ?: "-"}")
@@ -297,9 +350,12 @@ object SessionFormatter {
             session.freezeFrame?.takeIf { it.hasData }?.let {
                 appendLine("프리즈 프레임 원인 DTC: ${it.triggerDtc ?: "확인 불가"}")
             }
-            appendLine("저장 DTC: ${list(stored)}")
-            appendLine("보류 DTC: ${list(pending)}")
-            appendLine("영구 DTC: ${list(permanent)}")
+            if (session.batteryOnly) appendLine("배터리 읽기 시험 기록 · 오류코드 미조회 · 정상 여부 판단 불가")
+            else {
+                appendLine("저장 DTC: ${list(stored)}")
+                appendLine("보류 DTC: ${list(pending)}")
+                appendLine("영구 DTC: ${list(permanent)}")
+            }
             appendLine("삭제 시도 여부: ${if (session.clearAttempted) "예" else "아니오"}")
             appendLine("삭제 응답: ${session.clearResponse?.trim() ?: "-"}")
             appendLine("삭제 후 DTC: ${list(session.dtcAfterClear)}")

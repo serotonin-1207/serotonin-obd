@@ -10,9 +10,15 @@ import com.eunho.leafobd.bluetooth.BluetoothConnectionState
 import com.eunho.leafobd.bluetooth.ConnectResult
 import com.eunho.leafobd.bluetooth.ObdBluetoothDevice
 import com.eunho.leafobd.data.AppSettings
+import com.eunho.leafobd.data.DiagnosticKnowledge
+import com.eunho.leafobd.data.KnowledgePackUpdateResult
+import com.eunho.leafobd.data.KnowledgePackUpdater
 import com.eunho.leafobd.data.SettingsRepository
 import com.eunho.leafobd.data.UpdateChecker
 import com.eunho.leafobd.data.UpdateResult
+import com.eunho.leafobd.data.VehicleProfile
+import com.eunho.leafobd.data.VehicleProfileRepository
+import com.eunho.leafobd.data.VehicleProfiles
 import com.eunho.leafobd.elm327.Elm327Client
 import com.eunho.leafobd.elm327.Elm327Command
 import com.eunho.leafobd.elm327.Elm327InitResult
@@ -24,8 +30,14 @@ import com.eunho.leafobd.elm327.FakeScenario
 import com.eunho.leafobd.log.CommandLog
 import com.eunho.leafobd.log.DiagnosticLogRepository
 import com.eunho.leafobd.log.DiagnosticSession
+import com.eunho.leafobd.log.DiagnosticCommunicationSnapshot
+import com.eunho.leafobd.log.DiagnosticVehicleSnapshot
 import com.eunho.leafobd.log.SavedSession
 import com.eunho.leafobd.log.SessionFormatter
+import com.eunho.leafobd.log.SavedCodeHistory
+import com.eunho.leafobd.log.SavedWorkshopReport
+import com.eunho.leafobd.log.UnknownCodeInput
+import com.eunho.leafobd.log.UnknownCodeQueue
 import com.eunho.leafobd.obd.DtcCode
 import com.eunho.leafobd.obd.CanMonitorParser
 import com.eunho.leafobd.obd.CanMonitorResult
@@ -72,8 +84,17 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val bluetooth = BluetoothClassicManager(application)
     private val logRepository = DiagnosticLogRepository(application)
     private val settingsRepository = SettingsRepository(application)
+    private val vehicleProfileRepository = VehicleProfileRepository(application)
+    private val recordVehicleGroups = com.eunho.leafobd.log.RecordVehicleGroups(application)
+    private val knowledgePackUpdater = KnowledgePackUpdater(application)
 
-    private val _uiState = MutableStateFlow(MainUiState(settings = settingsRepository.load()))
+    private val _uiState = MutableStateFlow(MainUiState(
+        settings = settingsRepository.load(),
+        vehicleProfiles = vehicleProfileRepository.load(),
+        knowledgePackVersion = DiagnosticKnowledge.VERSION,
+        knowledgePackRevision = DiagnosticKnowledge.activeRevision,
+        knowledgePackSource = DiagnosticKnowledge.sourceLabel
+    ))
     val uiState: StateFlow<MainUiState> = _uiState.asStateFlow()
 
     /** 어댑터 명령은 한 번에 한 흐름만 실행한다. */
@@ -84,8 +105,16 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     /** 이번 세션에서 주고받은 모든 명령 로그. 파일 저장의 근거가 된다. */
     private val commandLogs = mutableListOf<CommandLog>()
+    private val batteryStop = java.util.concurrent.atomic.AtomicBoolean(false)
+    private val batteryHistory = com.eunho.leafobd.data.BatteryHistory(java.io.File(application.noBackupFilesDir, "battery-history"))
+    private val batteryPreferences = application.getSharedPreferences("battery-preferences", android.content.Context.MODE_PRIVATE)
+    private val batteryHistoryMutex = Mutex()
 
     init {
+        val profile = runCatching { com.eunho.leafobd.ev.EvProfile.valueOf(batteryPreferences.getString("profile", "LEAF_ZE1")!!) }
+            .getOrDefault(com.eunho.leafobd.ev.EvProfile.LEAF_ZE1)
+        _uiState.update { it.copy(batteryProfile = profile) }
+        viewModelScope.launch { refreshBatteryHistory() }
         refreshPrerequisites()
         refreshSavedSessions()
         if (_uiState.value.settings.checkForUpdates) checkForUpdates(silent = true)
@@ -128,6 +157,43 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun dismissUpdate() {
         _uiState.update { it.copy(updateAvailable = null) }
+    }
+
+    /** 사용자가 누른 경우에만 서명된 공개 오류코드 데이터 팩을 확인하고 설치한다. */
+    fun updateKnowledgePack() {
+        if (!_uiState.value.settings.checkForUpdates) {
+            showMessage("업데이트 확인을 켠 뒤 오류코드 데이터를 업데이트할 수 있습니다.")
+            return
+        }
+        if (_uiState.value.knowledgePackUpdating) return
+        _uiState.update { it.copy(knowledgePackUpdating = true) }
+        viewModelScope.launch {
+            when (val result = knowledgePackUpdater.update(DiagnosticKnowledge.activeRevision, BuildConfig.VERSION_CODE)) {
+                is KnowledgePackUpdateResult.Updated -> {
+                    _uiState.update {
+                        it.copy(
+                            knowledgePackUpdating = false,
+                            knowledgePackVersion = result.version,
+                            knowledgePackRevision = result.revision,
+                            knowledgePackSource = DiagnosticKnowledge.sourceLabel
+                        )
+                    }
+                    showMessage("오류코드 데이터 ${result.entryCount}건을 업데이트했습니다.")
+                }
+                KnowledgePackUpdateResult.UpToDate -> {
+                    _uiState.update { it.copy(knowledgePackUpdating = false) }
+                    showMessage("오류코드 데이터가 최신입니다.")
+                }
+                is KnowledgePackUpdateResult.AppUpdateRequired -> {
+                    _uiState.update { it.copy(knowledgePackUpdating = false) }
+                    showMessage("이 데이터 팩은 더 최신 앱이 필요합니다. 앱을 먼저 업데이트하세요.")
+                }
+                is KnowledgePackUpdateResult.Failed -> {
+                    _uiState.update { it.copy(knowledgePackUpdating = false) }
+                    showMessage(result.message)
+                }
+            }
+        }
     }
 
     // ------------------------------------------------------------------
@@ -187,8 +253,53 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     // 설정
     // ------------------------------------------------------------------
 
-    fun setVehicleName(name: String) = updateSettings {
-        it.copy(vehicleName = name.ifBlank { AppSettings.DEFAULT_VEHICLE })
+    fun setVehicleName(name: String) {
+        val vehicle = name.ifBlank { AppSettings.DEFAULT_VEHICLE }
+        if (vehicle == _uiState.value.vehicleName) return
+        disconnectInternal()
+        updateSettings { it.copy(vehicleName = vehicle, knownEcuAddresses = emptyList()) }
+        _uiState.update { it.copy(ecuScan = null, udsResult = null, sessionSaved = false,
+            modeResults = emptyList(), dtcs = emptyList(), liveValues = emptyList(), freezeFrame = null,
+            vin = null, elmInitialized = false, clearComparison = null, udsClearResult = null,
+            connectionState = BluetoothConnectionState.Idle) }
+    }
+
+    fun saveVehicleProfile(profile: VehicleProfile) {
+        if (_uiState.value.diagnosisRunning || _uiState.value.batteryRunning) return
+        runCatching {
+            val profiles = VehicleProfiles.put(_uiState.value.vehicleProfiles, profile)
+            vehicleProfileRepository.save(profiles)
+            _uiState.update { it.copy(vehicleProfiles = profiles) }
+        }.onSuccess {
+            selectVehicleProfile(profile.id)
+            showMessage("차량 프로필을 저장하고 진단 차량으로 선택했습니다.")
+        }
+            .onFailure { showMessage(it.message ?: "차량 프로필을 저장하지 못했습니다.") }
+    }
+
+    fun selectVehicleProfile(id: String?) {
+        if (_uiState.value.diagnosisRunning || _uiState.value.batteryRunning) return
+        val profile = id?.let { selected -> _uiState.value.vehicleProfiles.firstOrNull { it.id == selected } }
+        if (id != null && profile == null) return
+        disconnectInternal()
+        updateSettings { it.copy(selectedVehicleProfileId = profile?.id, vehicleName = profile?.alias ?: AppSettings.DEFAULT_VEHICLE, knownEcuAddresses = emptyList()) }
+        _uiState.update { state -> state.copy(ecuScan = null, udsResult = null, sessionSaved = false, modeResults = emptyList(), dtcs = emptyList(),
+            liveValues = emptyList(), freezeFrame = null, vin = null, elmInitialized = false, clearComparison = null, udsClearResult = null,
+            connectionState = BluetoothConnectionState.Idle,
+            batteryProfile = profile?.evProfile ?: state.batteryProfile) }
+        showMessage(profile?.let { "진단 차량을 ${it.alias}(으)로 선택했습니다." } ?: "진단 차량 선택을 해제했습니다.")
+    }
+
+    fun deleteVehicleProfile(id: String) {
+        if (_uiState.value.diagnosisRunning || _uiState.value.batteryRunning) return
+        val profiles = _uiState.value.vehicleProfiles.filterNot { it.id == id }
+        if (profiles.size == _uiState.value.vehicleProfiles.size) return
+        runCatching { vehicleProfileRepository.save(profiles) }
+            .onSuccess {
+                _uiState.update { it.copy(vehicleProfiles = profiles) }
+                if (_uiState.value.settings.selectedVehicleProfileId == id) selectVehicleProfile(null)
+                showMessage("차량 프로필을 삭제했습니다. 기존 진단 기록은 유지됩니다.")
+            }.onFailure { showMessage("차량 프로필을 삭제하지 못했습니다.") }
     }
 
     // ------------------------------------------------------------------
@@ -453,7 +564,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
         val startedAt = System.currentTimeMillis()
 
-        _uiState.update { it.copy(udsClearRunning = true, udsClearResult = null) }
+        _uiState.update { it.copy(udsClearRunning = true, udsClearResult = null, udsClearAttempted = true) }
 
         try {
             // 1. 삭제 (반복하지 않는다)
@@ -476,15 +587,16 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 outcomes = outcomes,
                 before = before,
                 after = reread.allCodes,
+                verificationComplete = targets.size == all.size && reread.results.size == targets.size &&
+                    reread.results.all { it.complete } && before.all { code -> code.ecu in reread.results.map { it.ecu } },
                 durationMs = System.currentTimeMillis() - startedAt
             )
 
             _uiState.update {
                 it.copy(
                     udsClearResult = result,
-                    // 재조회로 현재 상태를 다시 확인했으므로 한 번 더 시도할 수 있게 연다.
-                    // 다만 확인 문구는 다시 입력해야 한다(실수로 반복되지 않게).
-                    udsClearAttempted = false,
+                    // 재조회 성공 여부와 무관하게 같은 세션에서는 다시 삭제하지 않는다.
+                    udsClearAttempted = true,
                     udsConfirmationInput = "",
                     udsResult = reread,
                     udsProgress = null
@@ -544,7 +656,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     // 연결
     // ------------------------------------------------------------------
 
-    fun connect() = launchExclusive {
+    fun connect() = connectToDevice(null)
+
+    /** 장치 목록의 한 버튼으로 선택과 연결을 함께 처리한다. */
+    fun connectDevice(device: ObdBluetoothDevice) = connectToDevice(device)
+
+    private fun connectToDevice(requestedDevice: ObdBluetoothDevice?) = launchExclusive {
         val state = _uiState.value
 
         if (state.testMode) {
@@ -565,13 +682,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             return@launchExclusive
         }
 
-        val device = state.selectedDevice ?: run {
+        val device = requestedDevice ?: state.selectedDevice ?: run {
             showMessage("먼저 연결할 어댑터를 선택해 주십시오.")
             return@launchExclusive
         }
 
         disconnectInternal()
-        _uiState.update { it.copy(connectionState = BluetoothConnectionState.Connecting) }
+        _uiState.update { it.copy(selectedDevice = device, connectionState = BluetoothConnectionState.Connecting) }
 
         when (val result = bluetooth.connect(device)) {
             is ConnectResult.Success -> {
@@ -622,6 +739,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
      * 어떤 단계에서 실패해도 지금까지의 결과와 원시 로그는 저장한다.
      */
     fun runDiagnosis() = launchExclusive {
+        if (_uiState.value.selectedVehicleProfile == null) {
+            showMessage("진단 전에 차량 프로필을 선택하세요.")
+            return@launchExclusive
+        }
         commandLogs.clear()
         _uiState.update {
             it.copy(
@@ -633,6 +754,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 sessionSaved = false,
                 savedSessionName = null,
                 clearAttempted = false,
+                udsClearAttempted = false,
                 clearComparison = null,
                 safetyChecks = List(ClearConfirmation.CHECKLIST.size) { false },
                 confirmationInput = "",
@@ -1140,7 +1262,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             return@launchExclusive
         }
 
-        _uiState.update { it.copy(clearRunning = true) }
+        _uiState.update { it.copy(clearRunning = true, clearAttempted = true) }
 
         try {
             val service = ObdService(activeClient, headersOn = _uiState.value.headersOn)
@@ -1156,8 +1278,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             // 3. 재조회
             val after = mutableListOf<DtcCode>()
             val results = mutableListOf<ModeResult>()
+            val verificationReads = mutableListOf<com.eunho.leafobd.obd.DtcReadOutcome>()
             ObdMode.entries.forEach { mode ->
                 val outcome = service.readDtcs(mode)
+                verificationReads.add(outcome)
                 commandLogs.add(outcome.log)
                 after.addAll(outcome.result.codes)
                 results.add(
@@ -1172,16 +1296,18 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             }
 
             // 4. 전후 비교
-            val beforeCodes = before.map { it.code }.toSet()
-            val afterCodes = after.map { it.code }.toSet()
+            val verified = com.eunho.leafobd.obd.ClearVerification.complete(verificationReads, before)
+            val beforeCodes = before.map { com.eunho.leafobd.obd.ClearVerification.identity(it) }.toSet()
+            val afterCodes = after.map { com.eunho.leafobd.obd.ClearVerification.identity(it) }.toSet()
             val comparison = ClearComparison(
                 response = clearOutcome.log.rawResponse.trim().ifEmpty { clearOutcome.message },
                 accepted = clearOutcome.accepted,
                 before = before,
                 after = after,
-                cleared = before.filter { it.code !in afterCodes },
-                remaining = after.filter { it.code in beforeCodes },
-                appeared = after.filter { it.code !in beforeCodes }
+                cleared = if (verified) before.filter { com.eunho.leafobd.obd.ClearVerification.identity(it) !in afterCodes } else emptyList(),
+                remaining = after.filter { com.eunho.leafobd.obd.ClearVerification.identity(it) in beforeCodes },
+                appeared = after.filter { com.eunho.leafobd.obd.ClearVerification.identity(it) !in beforeCodes },
+                verificationComplete = verified
             )
 
             _uiState.update {
@@ -1219,6 +1345,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         val session = buildSession()
         return logRepository.save(session).fold(
             onSuccess = { saved ->
+                _uiState.value.selectedVehicleProfile?.let { profile ->
+                    kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                        runCatching { recordVehicleGroups.assign(listOf(saved), profile.alias) }
+                    }
+                }
                 _uiState.update {
                     it.copy(sessionSaved = true, savedSessionName = saved.baseName)
                 }
@@ -1245,6 +1376,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             protocolAttempts = state.protocolProbe?.attempted
                 ?.joinToString(", ") { "${it.first.setCommand}(${it.first.label})=${it.second.label}" },
             vehicle = state.settings.vehicleName,
+            vehicleSnapshot = state.selectedVehicleProfile?.let(DiagnosticVehicleSnapshot::from),
+            communicationSnapshot = DiagnosticCommunicationSnapshot(
+                protocolIdentified = !state.protocol.isNullOrBlank(),
+                standardDataObserved = state.monitorStatus != null || state.supportedPids != null ||
+                    state.freezeFrame?.hasData == true || state.dtcs.isNotEmpty(),
+                udsRespondingEcuCount = state.ecuScan?.respondingAddresses?.size
+            ),
             // VIN 은 식별정보다. 설정에서 끄지 않는 한 마스킹해서 저장한다.
             vin = if (state.settings.saveVinMasked) VinMasking.mask(state.vin) else state.vin,
             monitorStatus = state.monitorStatus,
@@ -1253,11 +1391,14 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             freezeFrame = state.freezeFrame,
             headersOn = state.headersOn,
             udsResults = state.udsResult?.results.orEmpty(),
+            udsClearAttempted = state.udsClearAttempted,
+            udsClearResult = state.udsClearResult,
             commands = commandLogs.toList(),
             dtcBeforeClear = state.clearComparison?.before ?: state.dtcs,
             clearAttempted = state.clearAttempted,
             clearResponse = state.clearComparison?.response,
             dtcAfterClear = state.clearComparison?.after.orEmpty(),
+            clearVerificationComplete = state.clearComparison?.verificationComplete == true,
             simulated = state.testMode,
             appVersion = BuildConfig.VERSION_NAME,
             androidVersion = "Android ${Build.VERSION.RELEASE} (API ${Build.VERSION.SDK_INT})"
@@ -1317,6 +1458,155 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun consumeMessage() {
         _uiState.update { it.copy(userMessage = null) }
+    }
+
+    /** 차량별로 분류된 실제 진단 기록에서 아직 해설 원장에 없는 코드만 찾는다. */
+    fun refreshUnknownCodeQueue() {
+        if (_uiState.value.unknownCodeQueueLoading) return
+        _uiState.update { it.copy(unknownCodeQueueLoading = true) }
+        viewModelScope.launch {
+            try {
+                val result = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                    val sessions = logRepository.list()
+                    val labels = recordVehicleGroups.labels(sessions)
+                    val inputs = sessions.map { saved ->
+                        val record = runCatching {
+                            require(saved.jsonFile.length() in 1..SavedWorkshopReport.MAX_BYTES.toLong())
+                            SavedCodeHistory.parse(saved.jsonFile.readText(Charsets.UTF_8))
+                        }.getOrNull()
+                        UnknownCodeInput(labels[saved.baseName], record)
+                    }
+                    UnknownCodeQueue.analyze(inputs, DiagnosticKnowledge.entries.map { it.code }.toSet())
+                }
+                _uiState.update { it.copy(unknownCodeQueue = result, unknownCodeQueueLoading = false) }
+            } catch (e: kotlinx.coroutines.CancellationException) {
+                _uiState.update { it.copy(unknownCodeQueueLoading = false) }
+                throw e
+            } catch (_: Exception) {
+                _uiState.update { it.copy(unknownCodeQueueLoading = false) }
+                showMessage("미해설 코드 대기함을 만들지 못했습니다. 저장 기록을 확인하세요.")
+            }
+        }
+    }
+
+    fun setBatterySnapshot(snapshot: com.eunho.leafobd.data.BatterySnapshot?) {
+        if (_uiState.value.batteryRunning || _uiState.value.batterySaving) return
+        _uiState.update { it.copy(batterySnapshot = snapshot, batteryMessage = "", batteryRaw = "", batteryRecordId = null, batteryRecordProfile = null) }
+    }
+
+    fun selectBatteryProfile(profile: com.eunho.leafobd.ev.EvProfile) {
+        if (_uiState.value.batteryRunning || _uiState.value.batterySaving) return
+        batteryPreferences.edit().putString("profile", profile.name).apply()
+        _uiState.update { it.copy(batteryProfile = profile, batterySnapshot = null, batteryRecordId = null,
+            batteryRecordProfile = null, batteryMessage = "", batteryRaw = "") }
+    }
+
+    fun stopBatteryRead() {
+        if (!_uiState.value.batteryRunning) return
+        batteryStop.set(true)
+        _uiState.update { it.copy(batteryStopRequested = true) }
+    }
+
+    private suspend fun refreshBatteryHistory() {
+        val result = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            batteryHistoryMutex.withLock { batteryHistory.load() }
+        }
+        _uiState.update { it.copy(batteryRecords = result.first,
+            batteryHistoryError = if (result.second > 0) "읽을 수 없는 기록 ${result.second}건 · 다른 기록은 정상 표시" else "") }
+    }
+
+    fun openBatteryRecord(id: String) {
+        val state = _uiState.value
+        if (state.batteryRunning || state.batterySaving) return
+        val record = state.batteryRecords.firstOrNull { it.id == id } ?: return
+        if (record.profile != null && record.profile != state.batteryProfile) return
+        _uiState.update { it.copy(batterySnapshot = record.snapshot, batteryRecordProfile = record.profile,
+            batteryRecordId = id, batteryRaw = record.raw, batteryMessage = "저장 기록을 열었습니다.\n${record.message}") }
+    }
+
+    fun deleteBatteryRecord(id: String) {
+        if (_uiState.value.batteryRunning || _uiState.value.batterySaving || _uiState.value.batteryRecords.none { it.id == id }) return
+        _uiState.update { it.copy(batterySaving = true) }
+        viewModelScope.launch {
+            try {
+                kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) { batteryHistoryMutex.withLock { batteryHistory.delete(id) } }
+                _uiState.update { if (it.batteryRecordId == id) it.copy(batteryRecordId = null, batterySnapshot = null,
+                    batteryRecordProfile = null, batteryRaw = "", batteryMessage = "") else it }
+                refreshBatteryHistory()
+            } catch (_: Exception) { showMessage("기록을 삭제하지 못했습니다. 다시 시도해 주세요.") }
+            finally { _uiState.update { it.copy(batterySaving = false) } }
+        }
+    }
+
+    private suspend fun persistBattery(record: com.eunho.leafobd.data.BatteryRecord): Boolean {
+        val saved = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            runCatching { batteryHistoryMutex.withLock { batteryHistory.save(record) } }
+        }
+        if (saved.isSuccess) {
+            _uiState.update { it.copy(batteryRecordId = record.id) }
+            refreshBatteryHistory()
+        } else showMessage("측정값 저장 실패 · 화면에서 다시 저장할 수 있습니다: ${saved.exceptionOrNull()?.message.orEmpty()}")
+        return saved.isSuccess
+    }
+
+    fun saveBatterySnapshot() {
+        val state = _uiState.value
+        val snapshot = state.batterySnapshot ?: return
+        if (state.batteryRunning || state.batterySaving || state.batteryRecordId != null || snapshot.demo) return
+        _uiState.update { it.copy(batterySaving = true) }
+        viewModelScope.launch {
+            try {
+                persistBattery(com.eunho.leafobd.data.BatteryRecord(profile = state.batteryRecordProfile,
+                    snapshot = snapshot, message = state.batteryMessage, raw = state.batteryRaw, vehicleProfileId = state.selectedVehicleProfile?.id))
+            } finally { _uiState.update { it.copy(batterySaving = false) } }
+        }
+    }
+
+    fun readEvBattery(profile: com.eunho.leafobd.ev.EvProfile, enabled: Boolean) = launchExclusive {
+        if (!enabled || _uiState.value.batterySaving || profile != _uiState.value.batteryProfile) return@launchExclusive
+        val vehicleProfile = _uiState.value.selectedVehicleProfile
+        if (vehicleProfile == null) {
+            showMessage("배터리 조회 전에 차량 프로필을 선택하세요.")
+            return@launchExclusive
+        }
+        if (vehicleProfile.evProfile != profile) {
+            showMessage("선택한 차량 프로필과 배터리 조회 차종이 다릅니다.")
+            return@launchExclusive
+        }
+        val active = client
+        if (active == null || !active.isOpen || active.simulated || _uiState.value.testMode) {
+            showMessage("어댑터 선택 화면에서 실제 어댑터에 먼저 연결하세요. 가상 모드에서는 차량 조회를 실행하지 않습니다.")
+            return@launchExclusive
+        }
+        val started = Instant.now()
+        batteryStop.set(false)
+        _uiState.update { it.copy(batteryRunning = true, batterySnapshot = null, batteryMessage = "조회 중 · 완료 후 연결을 해제합니다.", batteryRaw = "",
+            batteryStopRequested = false, batteryProgress = 0f, batteryStage = "조회 준비", batteryRecordId = null, batteryRecordProfile = profile) }
+        try {
+            val result = com.eunho.leafobd.ev.EvBatteryService(active).read(profile, batteryStop::get) { stage, done, total ->
+                _uiState.update { it.copy(batteryStage = stage, batteryProgress = done.toFloat() / total) }
+            }
+            val raw = result.logs.joinToString("\n") { "${it.timestamp} > ${it.command}\n${it.rawResponse}" }
+            _uiState.update { it.copy(batterySnapshot = result.snapshot, batteryMessage = result.messages.joinToString("\n"), batteryRaw = raw) }
+            persistBattery(com.eunho.leafobd.data.BatteryRecord(profile = profile, snapshot = result.snapshot,
+                message = result.messages.joinToString("\n"), raw = raw, vehicleProfileId = vehicleProfile.id))
+            val saved = logRepository.save(DiagnosticSession(
+                id = UUID.randomUUID().toString(), startedAt = started,
+                deviceName = _uiState.value.selectedDevice?.name,
+                deviceAddressMasked = MacMasking.mask(_uiState.value.selectedDevice?.address),
+                adapterInfo = null, adapterVoltage = null, vehicle = profile.label + " · 배터리 읽기 시험 · DTC 미조회",
+                vehicleSnapshot = DiagnosticVehicleSnapshot.from(vehicleProfile), headersOn = true,
+                commands = result.logs, appVersion = BuildConfig.VERSION_NAME, batteryOnly = true
+            ))
+            if (saved.isFailure) showMessage("배터리 원시 기록 저장에 실패했습니다.")
+            else saved.getOrNull()?.let { stored -> kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                runCatching { recordVehicleGroups.assign(listOf(stored), vehicleProfile.alias) }
+            } }
+            refreshSavedSessionsNow()
+        } finally {
+            disconnectInternal()
+            _uiState.update { it.copy(batteryRunning = false, elmInitialized = false, connectionState = BluetoothConnectionState.Disconnected) }
+        }
     }
 
     /**
